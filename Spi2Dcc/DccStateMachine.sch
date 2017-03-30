@@ -1,0 +1,571 @@
+EESchema Schematic File Version 2
+LIBS:Trainiot
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SpiDcc-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 9
+Title "Trainiot SPI DCC"
+Date "2017-03-27"
+Rev "1.3"
+Comp "Lars Møllebjerg"
+Comment1 "The CMD_LENGTH_BITs are used to determine when to generate the command end bit."
+Comment2 "The DCC signal is used as a clock."
+Comment3 ""
+Comment4 "Track the state of the signal - preamble, command stop bit, data bit, etc."
+$EndDescr
+$Comp
+L 74HC163 U401
+U 1 1 58B35961
+P 3650 2550
+F 0 "U401" H 3700 2650 50  0000 C CNN
+F 1 "74HC163" H 3750 2350 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 3650 2550 50  0001 C CNN
+F 3 "" H 3650 2550 50  0000 C CNN
+	1    3650 2550
+	1    0    0    -1  
+$EndComp
+Text HLabel 1750 4600 0    60   Input ~ 0
+DCC
+$Comp
+L VCC #PWR011
+U 1 1 58B359F3
+P 2950 1350
+F 0 "#PWR011" H 2950 1200 50  0001 C CNN
+F 1 "VCC" H 2950 1500 50  0000 C CNN
+F 2 "" H 2950 1350 50  0000 C CNN
+F 3 "" H 2950 1350 50  0000 C CNN
+	1    2950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 58B35AAD
+P 3300 3300
+F 0 "#PWR012" H 3300 3050 50  0001 C CNN
+F 1 "GND" H 3300 3150 50  0000 C CNN
+F 2 "" H 3300 3300 50  0000 C CNN
+F 3 "" H 3300 3300 50  0000 C CNN
+	1    3300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 58B35B15
+P 2400 2250
+F 0 "#PWR013" H 2400 2000 50  0001 C CNN
+F 1 "GND" H 2400 2100 50  0000 C CNN
+F 2 "" H 2400 2250 50  0000 C CNN
+F 3 "" H 2400 2250 50  0000 C CNN
+	1    2400 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C401
+U 1 1 58B35B9F
+P 3650 1550
+F 0 "C401" H 3675 1650 50  0000 L CNN
+F 1 "100nF" H 3675 1450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3688 1400 50  0001 C CNN
+F 3 "" H 3650 1550 50  0000 C CNN
+	1    3650 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 58B35C0D
+P 3900 1700
+F 0 "#PWR014" H 3900 1450 50  0001 C CNN
+F 1 "GND" H 3900 1550 50  0000 C CNN
+F 2 "" H 3900 1700 50  0000 C CNN
+F 3 "" H 3900 1700 50  0000 C CNN
+	1    3900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC04 U402
+U 1 1 58B35D60
+P 4400 3050
+F 0 "U402" H 4550 3150 50  0000 C CNN
+F 1 "74HC04" H 4600 2950 50  0000 C CNN
+F 2 "SMD_Packages:SOIC-14_N" H 4400 3050 50  0001 C CNN
+F 3 "" H 4400 3050 50  0000 C CNN
+	1    4400 3050
+	0    1    1    0   
+$EndComp
+Text HLabel 10100 3900 2    60   Output ~ 0
+IN_PREAMBLE
+$Comp
+L 74HC163 U403
+U 1 1 58B36388
+P 6050 2550
+F 0 "U403" H 6100 2650 50  0000 C CNN
+F 1 "74HC163" H 6150 2350 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 6050 2550 50  0001 C CNN
+F 3 "" H 6050 2550 50  0000 C CNN
+	1    6050 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C403
+U 1 1 58B363CC
+P 6050 1550
+F 0 "C403" H 6075 1650 50  0000 L CNN
+F 1 "100nF" H 6075 1450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6088 1400 50  0001 C CNN
+F 3 "" H 6050 1550 50  0000 C CNN
+	1    6050 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 58B36415
+P 6350 1700
+F 0 "#PWR015" H 6350 1450 50  0001 C CNN
+F 1 "GND" H 6350 1550 50  0000 C CNN
+F 2 "" H 6350 1700 50  0000 C CNN
+F 3 "" H 6350 1700 50  0000 C CNN
+	1    6350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR016
+U 1 1 58B366CD
+P 5400 1400
+F 0 "#PWR016" H 5400 1250 50  0001 C CNN
+F 1 "VCC" H 5400 1550 50  0000 C CNN
+F 2 "" H 5400 1400 50  0000 C CNN
+F 3 "" H 5400 1400 50  0000 C CNN
+	1    5400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC04 U402
+U 4 1 58B36841
+P 9050 3500
+F 0 "U402" H 9200 3600 50  0000 C CNN
+F 1 "74HC04" H 9250 3400 50  0000 C CNN
+F 2 "SMD_Packages:SOIC-14_N" H 9050 3500 50  0001 C CNN
+F 3 "" H 9050 3500 50  0000 C CNN
+	4    9050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR017
+U 1 1 58B375B6
+P 5200 2350
+F 0 "#PWR017" H 5200 2100 50  0001 C CNN
+F 1 "GND" H 5350 2300 50  0000 C CNN
+F 2 "" H 5200 2350 50  0000 C CNN
+F 3 "" H 5200 2350 50  0000 C CNN
+	1    5200 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C402
+U 1 1 58B379F5
+P 4750 3450
+F 0 "C402" H 4775 3550 50  0000 L CNN
+F 1 "100nF" H 4775 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4788 3300 50  0001 C CNN
+F 3 "" H 4750 3450 50  0000 C CNN
+	1    4750 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 58B37A65
+P 4750 3650
+F 0 "#PWR018" H 4750 3400 50  0001 C CNN
+F 1 "GND" H 4750 3500 50  0000 C CNN
+F 2 "" H 4750 3650 50  0000 C CNN
+F 3 "" H 4750 3650 50  0000 C CNN
+	1    4750 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR019
+U 1 1 58B37CA4
+P 4750 2800
+F 0 "#PWR019" H 4750 2650 50  0001 C CNN
+F 1 "VCC" H 4750 2950 50  0000 C CNN
+F 2 "" H 4750 2800 50  0000 C CNN
+F 3 "" H 4750 2800 50  0000 C CNN
+	1    4750 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 58B37D7D
+P 4150 3200
+F 0 "#PWR020" H 4150 2950 50  0001 C CNN
+F 1 "GND" H 4150 3050 50  0000 C CNN
+F 2 "" H 4150 3200 50  0000 C CNN
+F 3 "" H 4150 3200 50  0000 C CNN
+	1    4150 3200
+	1    0    0    -1  
+$EndComp
+Text Label 5050 2550 2    60   ~ 0
+~IN_PREAMBLE~
+$Comp
+L 74HC32 U302
+U 2 1 58B387AD
+P 7550 3100
+F 0 "U302" H 7550 3150 50  0000 C CNN
+F 1 "74HC32" H 7550 3050 50  0000 C CNN
+F 2 "SMD_Packages:SOIC-14_N" H 7550 3100 50  0001 C CNN
+F 3 "" H 7550 3100 50  0000 C CNN
+	2    7550 3100
+	1    0    0    -1  
+$EndComp
+Text HLabel 10100 3100 2    60   Output ~ 0
+~IN_DATA_BIT~
+Text HLabel 10100 3500 2    60   Output ~ 0
+IN_DATA_BIT
+Text HLabel 1750 4800 0    60   Input ~ 0
+CMD_LENGTH_BIT_0
+$Comp
+L 74HC193 U404
+U 1 1 58B3DE16
+P 6050 5200
+F 0 "U404" H 6050 5350 50  0000 C CNN
+F 1 "74HC193" H 6050 5200 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 6050 5200 50  0001 C CNN
+F 3 "" H 6050 5200 50  0000 C CNN
+	1    6050 5200
+	1    0    0    -1  
+$EndComp
+Text HLabel 1750 4900 0    60   Input ~ 0
+CMD_LENGTH_BIT_1
+Text HLabel 1750 5000 0    60   Input ~ 0
+CMD_LENGTH_BIT_2
+$Comp
+L C C404
+U 1 1 58B3E4A2
+P 7100 4600
+F 0 "C404" H 7125 4700 50  0000 L CNN
+F 1 "100nF" H 7125 4500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7138 4450 50  0001 C CNN
+F 3 "" H 7100 4600 50  0000 C CNN
+	1    7100 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 58B3E506
+P 7350 4850
+F 0 "#PWR021" H 7350 4600 50  0001 C CNN
+F 1 "GND" H 7350 4700 50  0000 C CNN
+F 2 "" H 7350 4850 50  0000 C CNN
+F 3 "" H 7350 4850 50  0000 C CNN
+	1    7350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR022
+U 1 1 58B3E599
+P 5750 4450
+F 0 "#PWR022" H 5750 4300 50  0001 C CNN
+F 1 "VCC" H 5750 4600 50  0000 C CNN
+F 2 "" H 5750 4450 50  0000 C CNN
+F 3 "" H 5750 4450 50  0000 C CNN
+	1    5750 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR023
+U 1 1 58B3EBA6
+P 5750 5950
+F 0 "#PWR023" H 5750 5700 50  0001 C CNN
+F 1 "GND" H 5750 5800 50  0000 C CNN
+F 2 "" H 5750 5950 50  0000 C CNN
+F 3 "" H 5750 5950 50  0000 C CNN
+	1    5750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR024
+U 1 1 58B3FBF3
+P 4800 5350
+F 0 "#PWR024" H 4800 5200 50  0001 C CNN
+F 1 "VCC" H 4800 5500 50  0000 C CNN
+F 2 "" H 4800 5350 50  0000 C CNN
+F 3 "" H 4800 5350 50  0000 C CNN
+	1    4800 5350
+	1    0    0    -1  
+$EndComp
+Text HLabel 10100 4150 2    60   Output ~ 0
+~IN_CMD_END_BIT~
+Text Notes 7000 2550 0    60   ~ 0
+When the preamble activates load it will set pin 1 low causing a reset on\nthe next clock (reset overrides load). This reset again sets pin 1 high allowing\nthe load to happen again (as long as the preamble is still active).\n\nThis makes the output on pin 11 alternate with the clock during preamble.\n\nTo ensure the right state as the preamble terminates, the length\nof the preamble MUST be odd.\n\nThis circuit use 15, though it could be 13 and still be DCC complient as the\ncommand stop bit can be included in the required 14 one bits of the preamble.\n
+Wire Wire Line
+	2950 1350 2950 1550
+Wire Wire Line
+	2650 1550 3500 1550
+Wire Wire Line
+	3350 1550 3350 2000
+Wire Wire Line
+	2650 1550 2650 3050
+Connection ~ 2950 1550
+Wire Wire Line
+	2650 2750 2950 2750
+Wire Wire Line
+	2650 3050 2950 3050
+Connection ~ 2650 2750
+Wire Wire Line
+	3300 3100 3300 3300
+Wire Wire Line
+	2400 2050 2950 2050
+Wire Wire Line
+	2400 2050 2400 2250
+Wire Wire Line
+	2950 2150 2850 2150
+Wire Wire Line
+	2850 2050 2850 2350
+Connection ~ 2850 2050
+Wire Wire Line
+	2850 2250 2950 2250
+Connection ~ 2850 2150
+Connection ~ 3350 1550
+Wire Wire Line
+	3800 1550 3900 1550
+Wire Wire Line
+	3900 1550 3900 1700
+Wire Wire Line
+	4350 2550 5350 2550
+Wire Wire Line
+	4400 2550 4400 2600
+Wire Wire Line
+	4400 3500 4400 3900
+Wire Wire Line
+	2400 3900 10100 3900
+Wire Wire Line
+	2400 3900 2400 2650
+Wire Wire Line
+	2400 2650 2950 2650
+Connection ~ 4400 3900
+Wire Wire Line
+	5750 1550 5750 2000
+Wire Wire Line
+	5100 1550 5900 1550
+Wire Wire Line
+	5100 1550 5100 2750
+Wire Wire Line
+	5100 2050 5350 2050
+Connection ~ 5750 1550
+Wire Wire Line
+	5400 1550 5400 1400
+Connection ~ 5400 1550
+Wire Wire Line
+	6200 1550 6350 1550
+Wire Wire Line
+	6350 1550 6350 1700
+Wire Wire Line
+	5200 3050 5350 3050
+Connection ~ 4400 2550
+Wire Wire Line
+	5100 2750 5350 2750
+Connection ~ 5100 2050
+Wire Wire Line
+	1750 4600 5100 4600
+Wire Wire Line
+	2850 4600 2850 2850
+Wire Wire Line
+	2850 2850 2950 2850
+Wire Wire Line
+	5350 2850 5100 2850
+Wire Wire Line
+	5100 2850 5100 4600
+Connection ~ 2850 4600
+Wire Wire Line
+	6750 2350 6850 2350
+Wire Wire Line
+	5200 2350 5350 2350
+Wire Wire Line
+	5350 2250 5250 2250
+Wire Wire Line
+	5250 2150 5250 2350
+Connection ~ 5250 2350
+Wire Wire Line
+	5250 2150 5350 2150
+Connection ~ 5250 2250
+Wire Wire Line
+	4750 3600 4750 3650
+Wire Wire Line
+	4750 2800 4750 3300
+Wire Wire Line
+	4150 3000 4300 3000
+Wire Wire Line
+	4150 3000 4150 3200
+Wire Wire Line
+	6950 3200 6850 3200
+Wire Wire Line
+	6850 3200 6850 3900
+Connection ~ 6850 3900
+Wire Wire Line
+	8150 3100 10100 3100
+Wire Wire Line
+	6850 2350 6850 3000
+Wire Wire Line
+	6700 3000 6950 3000
+Wire Wire Line
+	1750 4800 5350 4800
+Wire Wire Line
+	5350 4900 1750 4900
+Wire Wire Line
+	1750 5000 5350 5000
+Wire Wire Line
+	5750 4450 5750 4750
+Wire Wire Line
+	5750 4600 6950 4600
+Connection ~ 5750 4600
+Wire Wire Line
+	7250 4600 7350 4600
+Wire Wire Line
+	7350 4600 7350 4850
+Wire Wire Line
+	5750 5650 5750 5950
+Wire Wire Line
+	2950 2550 2750 2550
+Wire Wire Line
+	2750 2550 2750 4200
+Wire Wire Line
+	8300 5500 6750 5500
+Wire Wire Line
+	6900 5500 6900 4200
+Wire Wire Line
+	6900 4200 2750 4200
+Wire Wire Line
+	5000 2550 5000 5250
+Wire Wire Line
+	5000 5250 5350 5250
+Connection ~ 5000 2550
+Wire Wire Line
+	5200 5500 5350 5500
+Wire Wire Line
+	5350 5400 4800 5400
+Wire Wire Line
+	4800 5400 4800 5350
+Wire Wire Line
+	5750 5750 5200 5750
+Wire Wire Line
+	5200 5750 5200 5600
+Wire Wire Line
+	5200 5600 5350 5600
+Connection ~ 5750 5750
+Connection ~ 6900 5500
+Wire Wire Line
+	10100 4150 8300 4150
+Wire Wire Line
+	8300 3100 8300 3500
+Wire Wire Line
+	8300 3500 8600 3500
+Connection ~ 8300 3100
+Wire Wire Line
+	9500 3500 10100 3500
+Wire Wire Line
+	9600 3500 9600 3800
+Wire Wire Line
+	9600 3800 5200 3800
+Connection ~ 9600 3500
+Wire Wire Line
+	5300 5600 5300 5100
+Wire Wire Line
+	5300 5100 5350 5100
+Connection ~ 5300 5600
+$Comp
+L GND #PWR025
+U 1 1 58BA704D
+P 5750 3250
+F 0 "#PWR025" H 5750 3000 50  0001 C CNN
+F 1 "GND" H 5750 3100 50  0000 C CNN
+F 2 "" H 5750 3250 50  0000 C CNN
+F 3 "" H 5750 3250 50  0000 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3250 5750 3100
+Wire Wire Line
+	2850 2350 2950 2350
+Connection ~ 2850 2250
+Wire Wire Line
+	5350 2650 5100 2650
+Connection ~ 5100 2650
+Wire Wire Line
+	5200 3800 5200 5500
+Wire Wire Line
+	6700 3000 6700 3600
+Wire Wire Line
+	5200 3600 5200 3050
+Connection ~ 6850 3000
+$Comp
+L 74HC04 U402
+U 2 1 58BA7DAE
+P 6200 3600
+F 0 "U402" H 6350 3700 50  0000 C CNN
+F 1 "74HC04" H 6400 3500 50  0000 C CNN
+F 2 "SMD_Packages:SOIC-14_N" H 6200 3600 50  0001 C CNN
+F 3 "" H 6200 3600 50  0000 C CNN
+	2    6200 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6700 3600 6650 3600
+Wire Wire Line
+	5750 3600 5200 3600
+Connection ~ 6800 4600
+Wire Wire Line
+	8300 4150 8300 5500
+$Comp
+L 74HC04 U402
+U 3 1 58BC3468
+P 9000 4450
+F 0 "U402" H 9150 4550 50  0000 C CNN
+F 1 "74HC04" H 9200 4350 50  0000 C CNN
+F 2 "SMD_Packages:SOIC-14_N" H 9000 4450 50  0001 C CNN
+F 3 "" H 9000 4450 50  0000 C CNN
+	3    9000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4450 10100 4450
+Wire Wire Line
+	8550 4450 8300 4450
+Connection ~ 8300 4450
+Text HLabel 10100 4450 2    60   Output ~ 0
+IN_CMD_END_BIT
+Wire Wire Line
+	4500 3000 4750 3000
+Connection ~ 4750 3000
+$EndSCHEMATC

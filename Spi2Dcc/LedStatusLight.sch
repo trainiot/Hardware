@@ -1,0 +1,591 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MyLibraries
+LIBS:SpiDcc-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 9
+Title "Trainiot SPI DCC"
+Date "2017-03-06"
+Rev "2"
+Comp "Lars Møllebjerg"
+Comment1 "Off: Booster master switch off"
+Comment2 "Yellow: Boosters disabled."
+Comment3 "Green: Boosters enabled."
+Comment4 "Visual indication of the current state."
+$EndDescr
+Text HLabel 1450 4300 0    60   Input ~ 0
+COMMAND_VALID
+$Comp
+L LED_Dual_ACA D?
+U 1 1 58BC8B91
+P 2850 3150
+F 0 "D?" H 2850 3375 50  0000 C CNN
+F 1 "LED_Dual_ACA (Red/Green)" H 2850 2900 50  0000 C CNN
+F 2 "" H 2850 3150 50  0000 C CNN
+F 3 "" H 2850 3150 50  0000 C CNN
+	1    2850 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X03 P?
+U 1 1 58BC8BFA
+P 4150 4050
+F 0 "P?" H 4150 4250 50  0000 C CNN
+F 1 "CONN_01X03" V 4250 4050 50  0000 C CNN
+F 2 "" H 4150 4050 50  0000 C CNN
+F 3 "" H 4150 4050 50  0000 C CNN
+	1    4150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BC8DB1
+P 2750 3700
+F 0 "R?" V 2830 3700 50  0000 C CNN
+F 1 "2.2K" V 2750 3700 50  0000 C CNN
+F 2 "" V 2680 3700 50  0000 C CNN
+F 3 "" H 2750 3700 50  0000 C CNN
+	1    2750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BC8E3F
+P 2950 3700
+F 0 "R?" V 3030 3700 50  0000 C CNN
+F 1 "270" V 2950 3700 50  0000 C CNN
+F 2 "" V 2880 3700 50  0000 C CNN
+F 3 "" H 2950 3700 50  0000 C CNN
+	1    2950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BC90D9
+P 3450 4150
+F 0 "R?" V 3530 4150 50  0000 C CNN
+F 1 "2.2K" V 3450 4150 50  0000 C CNN
+F 2 "" V 3380 4150 50  0000 C CNN
+F 3 "" H 3450 4150 50  0000 C CNN
+	1    3450 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58BC9137
+P 3450 3950
+F 0 "R?" V 3530 3950 50  0000 C CNN
+F 1 "270" V 3450 3950 50  0000 C CNN
+F 2 "" V 3380 3950 50  0000 C CNN
+F 3 "" H 3450 3950 50  0000 C CNN
+	1    3450 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58BC9221
+P 3800 4050
+F 0 "#PWR?" H 3800 3800 50  0001 C CNN
+F 1 "GND" H 3800 3900 50  0000 C CNN
+F 2 "" H 3800 4050 50  0000 C CNN
+F 3 "" H 3800 4050 50  0000 C CNN
+	1    3800 4050
+	0    1    1    0   
+$EndComp
+Text Notes 3200 3150 0    60   ~ 0
+Print board LED.\nResistor values found by experimentation\n(no datasheet available).\n
+Text Notes 4300 4200 0    60   ~ 0
+Front panel LED.\nPin 1: Green\nPin 2: Gnd\nPin 3: Red
+Text HLabel 9600 3450 2    60   Output ~ 0
+BOOSTER_ENABLE
+Text Notes 8500 5400 0    60   ~ 0
+Sensor connector: Booster enabled\nPin 1: 3.3V when master switch on and valid command\nPin 2: Gnd
+$Comp
+L CONN_01X02 P?
+U 1 1 58C29F21
+P 9800 1900
+F 0 "P?" H 9800 2050 50  0000 C CNN
+F 1 "CONN_01X02" V 9900 1900 50  0000 C CNN
+F 2 "" H 9800 1900 50  0000 C CNN
+F 3 "" H 9800 1900 50  0000 C CNN
+	1    9800 1900
+	1    0    0    -1  
+$EndComp
+Text Notes 8900 1700 0    60   ~ 0
+Sensor connector: Master switch\nPin 1: 3.3V when switch on\nPin 2: Gnd
+Text Notes 5800 4800 0    60   ~ 0
+Sensor connector: Command invalid\nPin 1: 3.3V when current command is <3 or >6 bytes\nPin 2: Gnd
+$Comp
+L R R?
+U 1 1 58BC8C5E
+P 1850 4300
+F 0 "R?" V 1930 4300 50  0000 C CNN
+F 1 "1K" V 1850 4300 50  0000 C CNN
+F 2 "" V 1780 4300 50  0000 C CNN
+F 3 "" H 1850 4300 50  0000 C CNN
+	1    1850 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 58C28926
+P 5600 4500
+F 0 "P?" H 5600 4650 50  0000 C CNN
+F 1 "CONN_01X02" V 5700 4500 50  0000 C CNN
+F 2 "" H 5600 4500 50  0000 C CNN
+F 3 "" H 5600 4500 50  0000 C CNN
+	1    5600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 58C289A1
+P 9700 4750
+F 0 "P?" H 9700 4900 50  0000 C CNN
+F 1 "CONN_01X02" V 9800 4750 50  0000 C CNN
+F 2 "" H 9700 4750 50  0000 C CNN
+F 3 "" H 9700 4750 50  0000 C CNN
+	1    9700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3550 2950 3450
+Wire Wire Line
+	2750 3450 2750 3550
+Wire Wire Line
+	2950 4700 2950 3950
+Wire Wire Line
+	2950 3950 2950 3850
+Wire Wire Line
+	3950 4050 3800 4050
+Wire Wire Line
+	3600 3950 3950 3950
+Connection ~ 2950 3950
+Wire Wire Line
+	2950 3950 3300 3950
+Wire Wire Line
+	3600 4150 3950 4150
+Connection ~ 2750 4050
+Wire Wire Line
+	3200 4150 3300 4150
+Wire Wire Line
+	3200 4050 3200 4150
+Wire Wire Line
+	3200 4150 3200 4450
+Wire Wire Line
+	2750 4050 2750 3850
+Wire Wire Line
+	2200 4050 2400 4050
+Wire Wire Line
+	2400 4050 2750 4050
+Wire Wire Line
+	2750 4050 3200 4050
+Wire Wire Line
+	2400 4100 2400 4050
+Wire Wire Line
+	2850 2850 2850 2550
+Wire Wire Line
+	2400 4500 2400 4700
+Wire Wire Line
+	2000 4300 2100 4300
+Wire Wire Line
+	2400 4700 2750 4700
+Wire Wire Line
+	2750 4700 2950 4700
+Wire Wire Line
+	2750 4700 2750 4950
+Connection ~ 2750 4700
+$Comp
+L CONN_01X02 P?
+U 1 1 58C6B078
+P 5950 2600
+F 0 "P?" H 5950 2750 50  0000 C CNN
+F 1 "CONN_01X02" V 6050 2600 50  0000 C CNN
+F 2 "" H 5950 2600 50  0000 C CNN
+F 3 "" H 5950 2600 50  0000 C CNN
+	1    5950 2600
+	1    0    0    -1  
+$EndComp
+Text Notes 6150 2650 0    60   ~ 0
+Front panel: Master switch
+Wire Wire Line
+	5300 2450 5300 2550
+Wire Wire Line
+	5300 2550 5300 3650
+$Comp
+L R R?
+U 1 1 58C6B1FF
+P 5300 2300
+F 0 "R?" V 5380 2300 50  0000 C CNN
+F 1 "10K" V 5300 2300 50  0000 C CNN
+F 2 "" V 5230 2300 50  0000 C CNN
+F 3 "" H 5300 2300 50  0000 C CNN
+	1    5300 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 58C6B26D
+P 5300 2100
+F 0 "#PWR?" H 5300 1950 50  0001 C CNN
+F 1 "VCC" H 5300 2250 50  0000 C CNN
+F 2 "" H 5300 2100 50  0000 C CNN
+F 3 "" H 5300 2100 50  0000 C CNN
+	1    5300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2100 5300 2150
+Wire Wire Line
+	5750 2650 5600 2650
+Wire Wire Line
+	5600 2650 5600 2750
+$Comp
+L GND #PWR?
+U 1 1 58C6B32A
+P 5600 2750
+F 0 "#PWR?" H 5600 2500 50  0001 C CNN
+F 1 "GND" H 5600 2600 50  0000 C CNN
+F 2 "" H 5600 2750 50  0000 C CNN
+F 3 "" H 5600 2750 50  0000 C CNN
+	1    5600 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 5300 2550
+Wire Wire Line
+	2850 2550 5300 2550
+Wire Wire Line
+	5300 2550 5600 2550
+Wire Wire Line
+	5600 2550 5750 2550
+Wire Wire Line
+	3200 4450 5300 4450
+Wire Wire Line
+	5300 4450 5400 4450
+Connection ~ 3200 4150
+Text Label 3650 4450 0    60   ~ 0
+~COMMAND_VALID
+Wire Wire Line
+	2200 4050 2200 3750
+Connection ~ 2400 4050
+$Comp
+L R R?
+U 1 1 58C6B5BD
+P 2200 3600
+F 0 "R?" V 2280 3600 50  0000 C CNN
+F 1 "10K" V 2200 3600 50  0000 C CNN
+F 2 "" V 2130 3600 50  0000 C CNN
+F 3 "" H 2200 3600 50  0000 C CNN
+	1    2200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3250 2200 3450
+$Comp
+L 74HC32 U?
+U 4 1 58C6B729
+P 6000 3750
+F 0 "U?" H 6000 3800 50  0000 C CNN
+F 1 "74HC32" H 6000 3700 50  0000 C CNN
+F 2 "" H 6000 3750 50  0000 C CNN
+F 3 "" H 6000 3750 50  0000 C CNN
+	4    6000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3650 5400 3650
+Wire Wire Line
+	5300 4450 5300 3850
+Wire Wire Line
+	5300 3850 5400 3850
+Wire Wire Line
+	6600 3750 7400 3750
+$Comp
+L R R?
+U 1 1 58C6B924
+P 7550 3750
+F 0 "R?" V 7630 3750 50  0000 C CNN
+F 1 "1K" V 7550 3750 50  0000 C CNN
+F 2 "" V 7480 3750 50  0000 C CNN
+F 3 "" H 7550 3750 50  0000 C CNN
+	1    7550 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 3750 7800 3750
+Text Label 6600 3750 0    60   ~ 0
+~BOOSTER_ENABLE
+Wire Wire Line
+	2750 4950 3050 4950
+Wire Wire Line
+	3050 4950 3050 4850
+$Comp
+L VCC #PWR?
+U 1 1 58C6C2B5
+P 3050 4850
+F 0 "#PWR?" H 3050 4700 50  0001 C CNN
+F 1 "VCC" H 3050 5000 50  0000 C CNN
+F 2 "" H 3050 4850 50  0000 C CNN
+F 3 "" H 3050 4850 50  0000 C CNN
+	1    3050 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 4300 1700 4300
+Wire Wire Line
+	2200 3250 1850 3250
+Wire Wire Line
+	1850 3250 1850 3450
+$Comp
+L GND #PWR?
+U 1 1 58C6C5C7
+P 1850 3450
+F 0 "#PWR?" H 1850 3200 50  0001 C CNN
+F 1 "GND" H 1850 3300 50  0000 C CNN
+F 2 "" H 1850 3450 50  0000 C CNN
+F 3 "" H 1850 3450 50  0000 C CNN
+	1    1850 3450
+	1    0    0    -1  
+$EndComp
+Text Label 4150 2550 0    60   ~ 0
+~MASTER_SWITCH
+Wire Wire Line
+	8100 3350 8100 3450
+Wire Wire Line
+	8100 3450 8100 3550
+$Comp
+L R R?
+U 1 1 58C6CF74
+P 8100 3200
+F 0 "R?" V 8180 3200 50  0000 C CNN
+F 1 "10K" V 8100 3200 50  0000 C CNN
+F 2 "" V 8030 3200 50  0000 C CNN
+F 3 "" H 8100 3200 50  0000 C CNN
+	1    8100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3050 8100 3000
+$Comp
+L GND #PWR?
+U 1 1 58C6D031
+P 7850 3200
+F 0 "#PWR?" H 7850 2950 50  0001 C CNN
+F 1 "GND" H 7850 3050 50  0000 C CNN
+F 2 "" H 7850 3200 50  0000 C CNN
+F 3 "" H 7850 3200 50  0000 C CNN
+	1    7850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3200 7850 3000
+Wire Wire Line
+	7850 3000 8100 3000
+Wire Wire Line
+	8100 3950 8100 4300
+Wire Wire Line
+	8100 4300 7850 4300
+Wire Wire Line
+	7850 4300 7850 4150
+$Comp
+L VCC #PWR?
+U 1 1 58C6D124
+P 7850 4150
+F 0 "#PWR?" H 7850 4000 50  0001 C CNN
+F 1 "VCC" H 7850 4300 50  0000 C CNN
+F 2 "" H 7850 4150 50  0000 C CNN
+F 3 "" H 7850 4150 50  0000 C CNN
+	1    7850 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3450 9100 3450
+Wire Wire Line
+	9100 3450 9600 3450
+Connection ~ 8100 3450
+Connection ~ 5300 4450
+Wire Wire Line
+	5400 4550 5300 4550
+Wire Wire Line
+	5300 4550 5300 4750
+$Comp
+L GND #PWR?
+U 1 1 58C6D62D
+P 5300 4750
+F 0 "#PWR?" H 5300 4500 50  0001 C CNN
+F 1 "GND" H 5300 4600 50  0000 C CNN
+F 2 "" H 5300 4750 50  0000 C CNN
+F 3 "" H 5300 4750 50  0000 C CNN
+	1    5300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58C6D920
+P 7550 2150
+F 0 "R?" V 7630 2150 50  0000 C CNN
+F 1 "1K" V 7550 2150 50  0000 C CNN
+F 2 "" V 7480 2150 50  0000 C CNN
+F 3 "" H 7550 2150 50  0000 C CNN
+	1    7550 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 2150 7800 2150
+Wire Wire Line
+	8100 1750 8100 1850
+Wire Wire Line
+	8100 1850 8100 1950
+$Comp
+L R R?
+U 1 1 58C6D92F
+P 8100 1600
+F 0 "R?" V 8180 1600 50  0000 C CNN
+F 1 "10K" V 8100 1600 50  0000 C CNN
+F 2 "" V 8030 1600 50  0000 C CNN
+F 3 "" H 8100 1600 50  0000 C CNN
+	1    8100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1450 8100 1400
+$Comp
+L GND #PWR?
+U 1 1 58C6D936
+P 7850 1600
+F 0 "#PWR?" H 7850 1350 50  0001 C CNN
+F 1 "GND" H 7850 1450 50  0000 C CNN
+F 2 "" H 7850 1600 50  0000 C CNN
+F 3 "" H 7850 1600 50  0000 C CNN
+	1    7850 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 1600 7850 1400
+Wire Wire Line
+	7850 1400 8100 1400
+Wire Wire Line
+	8100 2350 8100 2700
+Wire Wire Line
+	8100 2700 7850 2700
+Wire Wire Line
+	7850 2700 7850 2550
+$Comp
+L VCC #PWR?
+U 1 1 58C6D941
+P 7850 2550
+F 0 "#PWR?" H 7850 2400 50  0001 C CNN
+F 1 "VCC" H 7850 2700 50  0000 C CNN
+F 2 "" H 7850 2550 50  0000 C CNN
+F 3 "" H 7850 2550 50  0000 C CNN
+	1    7850 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1850 9600 1850
+Connection ~ 8100 1850
+Wire Wire Line
+	9600 1950 9400 1950
+Wire Wire Line
+	9400 1950 9400 2200
+Wire Wire Line
+	5600 2550 5600 2150
+Wire Wire Line
+	5600 2150 7400 2150
+Connection ~ 5600 2550
+$Comp
+L GND #PWR?
+U 1 1 58C6E0B0
+P 9400 2200
+F 0 "#PWR?" H 9400 1950 50  0001 C CNN
+F 1 "GND" H 9400 2050 50  0000 C CNN
+F 2 "" H 9400 2200 50  0000 C CNN
+F 3 "" H 9400 2200 50  0000 C CNN
+	1    9400 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 4700 9100 4700
+Wire Wire Line
+	9100 4700 9100 3450
+Connection ~ 9100 3450
+Wire Wire Line
+	9500 4800 9100 4800
+Wire Wire Line
+	9100 4800 9100 4900
+$Comp
+L GND #PWR?
+U 1 1 58C6E30F
+P 9100 4900
+F 0 "#PWR?" H 9100 4650 50  0001 C CNN
+F 1 "GND" H 9100 4750 50  0000 C CNN
+F 2 "" H 9100 4900 50  0000 C CNN
+F 3 "" H 9100 4900 50  0000 C CNN
+	1    9100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC807-40 Q?
+U 1 1 58C6ECC9
+P 2300 4300
+F 0 "Q?" H 2500 4375 50  0000 L CNN
+F 1 "BC327-40" H 2500 4300 50  0000 L CNN
+F 2 "" H 2500 4225 50  0000 L CIN
+F 3 "" H 2300 4300 50  0000 L CNN
+	1    2300 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC807-40 Q?
+U 1 1 58C6EE52
+P 8000 3750
+F 0 "Q?" H 8200 3825 50  0000 L CNN
+F 1 "BC327-40" H 8200 3750 50  0000 L CNN
+F 2 "" H 8200 3675 50  0000 L CIN
+F 3 "" H 8000 3750 50  0000 L CNN
+	1    8000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC807-40 Q?
+U 1 1 58C6EEBA
+P 8000 2150
+F 0 "Q?" H 8200 2225 50  0000 L CNN
+F 1 "BC327-40" H 8200 2150 50  0000 L CNN
+F 2 "" H 8200 2075 50  0000 L CIN
+F 3 "" H 8000 2150 50  0000 L CNN
+	1    8000 2150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

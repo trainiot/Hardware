@@ -1,0 +1,264 @@
+EESchema Schematic File Version 2
+LIBS:Trainiot
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SpiDcc-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 9
+Title "Trainiot SPI DCC"
+Date "2017-03-27"
+Rev "1.3"
+Comp "Lars Møllebjerg"
+Comment1 "They must respect the BOOSTER_ENABLE signal and remove signal from the track when low."
+Comment2 "The boosters are expected to maintain isolation through optocouplers."
+Comment3 ""
+Comment4 "Allows connecting multiple boosters with either scre terminals or other connections."
+$EndDescr
+Text HLabel 2400 2050 0    60   Input ~ 0
+DCC
+Text HLabel 2400 2200 0    60   Input ~ 0
+BOOSTER_ENABLE
+$Comp
+L GND #PWR099
+U 1 1 58BDB71B
+P 6550 5350
+F 0 "#PWR099" H 6550 5100 50  0001 C CNN
+F 1 "GND" H 6550 5200 50  0000 C CNN
+F 2 "" H 6550 5350 50  0000 C CNN
+F 3 "" H 6550 5350 50  0000 C CNN
+	1    6550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HC4053 U301
+U 3 1 58BDFFD6
+P 4850 2050
+F 0 "U301" H 4600 2450 50  0000 C CNN
+F 1 "74HC4053" H 4600 1650 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 4850 2050 60  0001 C CNN
+F 3 "" H 4850 2050 60  0001 C CNN
+	3    4850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0100
+U 1 1 58BE00CD
+P 4000 2700
+F 0 "#PWR0100" H 4000 2450 50  0001 C CNN
+F 1 "GND" H 4000 2550 50  0000 C CNN
+F 2 "" H 4000 2700 50  0000 C CNN
+F 3 "" H 4000 2700 50  0000 C CNN
+	1    4000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR0101
+U 1 1 58C6E7B0
+P 4000 1500
+F 0 "#PWR0101" H 4000 1350 50  0001 C CNN
+F 1 "VCC" H 4000 1650 50  0000 C CNN
+F 2 "" H 4000 1500 50  0000 C CNN
+F 3 "" H 4000 1500 50  0000 C CNN
+	1    4000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R901
+U 1 1 58C6E836
+P 5750 2050
+F 0 "R901" V 5830 2050 50  0000 C CNN
+F 1 "1K" V 5750 2050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5680 2050 50  0001 C CNN
+F 3 "" H 5750 2050 50  0000 C CNN
+	1    5750 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC #PWR0102
+U 1 1 58C6E936
+P 6050 2400
+F 0 "#PWR0102" H 6050 2250 50  0001 C CNN
+F 1 "VCC" H 6050 2550 50  0000 C CNN
+F 2 "" H 6050 2400 50  0000 C CNN
+F 3 "" H 6050 2400 50  0000 C CNN
+	1    6050 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R902
+U 1 1 58C6E9AF
+P 6000 1600
+F 0 "R902" V 6080 1600 50  0000 C CNN
+F 1 "10K" V 6000 1600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5930 1600 50  0001 C CNN
+F 3 "" H 6000 1600 50  0000 C CNN
+	1    6000 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR0103
+U 1 1 58C6EA6F
+P 5700 1700
+F 0 "#PWR0103" H 5700 1450 50  0001 C CNN
+F 1 "GND" H 5700 1550 50  0000 C CNN
+F 2 "" H 5700 1700 50  0000 C CNN
+F 3 "" H 5700 1700 50  0000 C CNN
+	1    5700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC807-40 Q901
+U 1 1 58C6EFFE
+P 6200 2050
+F 0 "Q901" H 6400 2125 50  0000 L CNN
+F 1 "BC327-40" H 6400 2050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6400 1975 50  0001 L CIN
+F 3 "" H 6200 2050 50  0000 L CNN
+	1    6200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P904
+U 1 1 58CCF37C
+P 7150 3850
+F 0 "P904" H 7150 4050 50  0000 C CNN
+F 1 "Bstr 4" V 7250 3850 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 7150 3850 50  0001 C CNN
+F 3 "" H 7150 3850 50  0000 C CNN
+	1    7150 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P901
+U 1 1 58CCF507
+P 6200 3650
+F 0 "P901" H 6200 3850 50  0000 C CNN
+F 1 "Bstr 1" V 6300 3650 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 6200 3650 50  0001 C CNN
+F 3 "" H 6200 3650 50  0000 C CNN
+	1    6200 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X03 P905
+U 1 1 58CCFC60
+P 7150 4450
+F 0 "P905" H 7150 4650 50  0000 C CNN
+F 1 "Bstr 5" V 7250 4450 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 7150 4450 50  0001 C CNN
+F 3 "" H 7150 4450 50  0000 C CNN
+	1    7150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P902
+U 1 1 58CCFC66
+P 6200 4250
+F 0 "P902" H 6200 4450 50  0000 C CNN
+F 1 "Bstr 2" V 6300 4250 50  0000 C CNN
+F 2 "Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight" H 6200 4250 50  0001 C CNN
+F 3 "" H 6200 4250 50  0000 C CNN
+	1    6200 4250
+	-1   0    0    1   
+$EndComp
+Connection ~ 6650 3850
+Wire Wire Line
+	4250 2050 2400 2050
+Wire Wire Line
+	2400 2200 4250 2200
+Wire Wire Line
+	4250 2350 4000 2350
+Wire Wire Line
+	4250 1900 4000 1900
+Wire Wire Line
+	3300 2200 3300 3250
+Wire Wire Line
+	3300 3250 6650 3250
+Connection ~ 3300 2200
+Wire Wire Line
+	4000 2350 4000 2700
+Wire Wire Line
+	4000 1900 4000 1500
+Wire Wire Line
+	5600 2050 5450 2050
+Wire Wire Line
+	6000 2050 5900 2050
+Wire Wire Line
+	6300 2250 6300 2500
+Wire Wire Line
+	6300 2500 6050 2500
+Wire Wire Line
+	6050 2500 6050 2400
+Wire Wire Line
+	6300 1850 6300 1600
+Wire Wire Line
+	6150 1600 6750 1600
+Connection ~ 6300 1600
+Wire Wire Line
+	5850 1600 5700 1600
+Wire Wire Line
+	5700 1600 5700 1700
+Wire Wire Line
+	6400 3750 6950 3750
+Connection ~ 6750 3750
+Wire Wire Line
+	6650 3850 6950 3850
+Wire Wire Line
+	6950 3950 6550 3950
+Wire Wire Line
+	6550 3550 6400 3550
+Connection ~ 6550 3950
+Wire Wire Line
+	6400 3650 6650 3650
+Connection ~ 6650 3650
+Wire Wire Line
+	6400 4350 6950 4350
+Connection ~ 6750 4350
+Wire Wire Line
+	6650 4450 6950 4450
+Wire Wire Line
+	6550 4550 6950 4550
+Wire Wire Line
+	6550 4150 6400 4150
+Connection ~ 6550 4550
+Wire Wire Line
+	6400 4250 6650 4250
+Connection ~ 6650 4250
+Wire Wire Line
+	6550 3550 6550 5350
+Connection ~ 6550 4150
+Wire Wire Line
+	6650 3250 6650 4450
+Wire Wire Line
+	6750 1600 6750 4350
+$EndSCHEMATC
