@@ -35,8 +35,7 @@ One set of registers (the input registers) holds the latest command recieved thr
 a new command it will copy the command from these registers into the registers used to transmit (the output registers).
 If commands are received faster than they can be transmitted they will be lost.
 
-* U501: Counts the number of bits received through the SPI interface. By ignoring the 3 least significent bits this 
-number is effectively devided by 8 providing the number of bytes. It uses SS from the SPI signal to both store the
+* U501: Counts the number of bits received through the SPI interface. By ignoring the 3 least significent bits this number is effectively devided by 8 providing the number of bytes. It uses SS from the SPI signal to both store the
 last command length in the output register and clear the counter so it is ready to count the next command
 (using U402E to invert SS as needed by the master counter reset).
 
@@ -92,3 +91,13 @@ Generates 0 or 1 DCC bits based on the output from the DCC State Machine and the
 * U301B two to one demultiplexer: Selectes the 58μs clock if the assembled DCC command bit is 1. If it is 0 the 116μs clock is selected.
 
 * U202B flip flop: Inverts the generated DCC signal based on the selected clock. This generates the final DCC signal which is also used as a clock driving the entire circuit as the DCC signal raising edge occurs when a bit has been transmitted.
+
+### Panel and Sensors
+Provides connectors for a front panel as well as sensor output that can be used for further automation.
+![Panel and Sensors schematic](https://kicaddoxer.azurewebsites.net/github/trainiot/Hardware/master/Spi2Dcc/PanelAndSensors.sch?hiddenpins=ShowIfConnectedToWire&.svg)
+
+* Q701 Drives the red color in two bi color LEDs (one on the board, one in the front panel). The red is turned off when a valid signal (command length of 3-6 bytes) is being generated. This results in green LEDs. It also drives the sensor output P702. If no valid sensor signal is generated both red and green LED colors will be lit resulting in a yellow light.
+
+* When the Master Switch (P703 front panel installation or P704 bypass jumper) are both open the LEDs will turn off as the cathodes of the LEDs will be driven high. The sensor output P706 will indicate if the switch (or bypass) is open or closed.
+
+* U302C OR gate: Activates boosters through Q703 (with sensor output P705) when there is **both** a valid command **and** the master switch (or bypass) is closed.
