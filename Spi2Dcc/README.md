@@ -1,4 +1,3 @@
-
 # SPI 2 DCC
 This hardware module allows generating a DCC signal from any device that can generate an SPI signal. This includes the 
 Raspberry PI and most other development boards. Notice this only generates the signal at 3.3V - a booster is required to run the trains at 12V or higher.
@@ -64,3 +63,11 @@ The 12 shift registers used to store the two DCC commands.
 * 74HC164 Parallel in registers: The 6 shift registers at the top holds the command currently being transmitted (output registers).
 The incoming IN_CMD_END_BIT signal is used to load the latest command from the input registers when transmitting a new command starts.
 If no new command has been received the previous command will be loaded again and retransmitted.
+
+### Clock Generator
+A 555 timer circuit used to generate a 58μs clock required by the DCC signal when transmitting 1 bits.
+![Clock Generator schematic](https://kicaddoxer.azurewebsites.net/github/trainiot/Hardware/master/Spi2Dcc/ClockGenerator.sch?hiddenpins=ShowIfConnectedToWire&.svg)
+The generated clock has a duty cycle close to 50%. This is not a requirement for the circuit to work - only the timing of the
+rising edge is important.
+
+U202A is a flip flop used to derive the 116μs clock required for 0 bits on the DCC protocol.
