@@ -12,8 +12,7 @@ but there are many (mostly newer and better) alternatives.
 If you want to play with the electronics and do plan to use a separate booster, try [DCC++](https://github.com/DccPlusPlus/BaseStation) which
 offers more functionality than this project.
 
-Still crazy enough to hang around here? Read here how the circuit is supposed to work. Supposed is an important word here! The hardware has not yet
-been assembled and no command has been sent to a model train at this moment in time.
+Still crazy enough to hang around here? Read here how the circuit is supposed to work. *Supposed* is an important word here! The hardware has not yet been assembled and no command has been sent to a model train at this moment in time.
 
 ## Schematics
 ### Overview
@@ -101,3 +100,15 @@ Provides connectors for a front panel as well as sensor output that can be used 
 * When the Master Switch (P703 front panel installation or P704 bypass jumper) are both open the LEDs will turn off as the cathodes of the LEDs will be driven high. The sensor output P706 will indicate if the switch (or bypass) is open or closed.
 
 * U302C OR gate: Activates boosters through Q703 (with sensor output P705) when there is **both** a valid command **and** the master switch (or bypass) is closed.
+
+### Booster Connectors
+Provides connectors for one or more DCC boosters.
+![Booster Connectors schematic](https://kicaddoxer.azurewebsites.net/github/trainiot/Hardware/master/Spi2Dcc/BoosterConnectors.sch?hiddenpins=ShowIfConnectedToWire&.svg)
+
+* U301C two to one demultiplexer: Always select high if BOOSTER_ENABLE is high - if not it selects the DCC signal. As the output is inverted by Q901 this results in the DCC output always being low (0) if BOOSTER_ENABLE is low. This would allow using boosters that enable/disable based on an active DCC signal instead of relying on the BOOSTER_ENABLE pin.
+
+* Q901: Enables relative high current boosters - specifically to support multiple boosters using optocouplers.
+
+The current schematic has 4 booster connectors - P901, P902, P904, and P905. This number is based on the space available on the PCB after layout. If needed Q901 should be able to drive significantly more boosters.
+
+There is no transistor driving BOOSTER_ENABLE on this schematics as it is already driven by Q703 on the "Panel and Sensors" schematic.
