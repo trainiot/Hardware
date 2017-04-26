@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 9
 Title "Trainiot SPI DCC"
-Date "2017-03-27"
-Rev "1.3"
+Date "2017-04-26"
+Rev "1.4"
 Comp "Lars Møllebjerg"
 Comment1 "command will be transmitted and a new command can be send from the SPI master."
 Comment2 "IN_PREAMBLE can be used as an interrupt source. The low to high edge signals the "

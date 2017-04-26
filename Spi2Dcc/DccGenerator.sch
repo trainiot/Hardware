@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 9
 Title "Trainiot SPI DCC"
-Date "2017-03-27"
-Rev "1.3"
+Date "2017-04-26"
+Rev "1.4"
 Comp "Lars Møllebjerg"
 Comment1 ""
 Comment2 "The DCC signal is also used as a clock driving the full circuit."

@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 9
 Title "Trainiot SPI DCC"
-Date "2017-03-27"
-Rev "1.3"
+Date "2017-04-26"
+Rev "1.4"
 Comp "Lars Møllebjerg"
 Comment1 "The CMD_LENGTH_BITs are used to determine when to generate the command end bit."
 Comment2 "The DCC signal is used as a clock."
@@ -272,12 +272,12 @@ CMD_LENGTH_BIT_2
 $Comp
 L C C404
 U 1 1 58B3E4A2
-P 7100 4600
-F 0 "C404" H 7125 4700 50  0000 L CNN
-F 1 "100nF" H 7125 4500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7138 4450 50  0001 C CNN
-F 3 "" H 7100 4600 50  0000 C CNN
-	1    7100 4600
+P 7150 4600
+F 0 "C404" H 7175 4700 50  0000 L CNN
+F 1 "100nF" H 7175 4500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7188 4450 50  0001 C CNN
+F 3 "" H 7150 4600 50  0000 C CNN
+	1    7150 4600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -331,11 +331,17 @@ When the preamble activates load it will set pin 1 low causing a reset on\nthe n
 Wire Wire Line
 	2950 1350 2950 1550
 Wire Wire Line
-	2650 1550 3500 1550
+	2650 1550 2950 1550
+Wire Wire Line
+	2950 1550 3350 1550
+Wire Wire Line
+	3350 1550 3500 1550
 Wire Wire Line
 	3350 1550 3350 2000
 Wire Wire Line
-	2650 1550 2650 3050
+	2650 1550 2650 2750
+Wire Wire Line
+	2650 2750 2650 3050
 Connection ~ 2950 1550
 Wire Wire Line
 	2650 2750 2950 2750
@@ -345,13 +351,19 @@ Connection ~ 2650 2750
 Wire Wire Line
 	3300 3100 3300 3300
 Wire Wire Line
-	2400 2050 2950 2050
+	2400 2050 2850 2050
+Wire Wire Line
+	2850 2050 2950 2050
 Wire Wire Line
 	2400 2050 2400 2250
 Wire Wire Line
 	2950 2150 2850 2150
 Wire Wire Line
-	2850 2050 2850 2350
+	2850 2050 2850 2150
+Wire Wire Line
+	2850 2150 2850 2250
+Wire Wire Line
+	2850 2250 2850 2350
 Connection ~ 2850 2050
 Wire Wire Line
 	2850 2250 2950 2250
@@ -362,13 +374,21 @@ Wire Wire Line
 Wire Wire Line
 	3900 1550 3900 1700
 Wire Wire Line
-	4350 2550 5350 2550
+	4350 2550 4400 2550
+Wire Wire Line
+	4400 2550 5000 2550
+Wire Wire Line
+	5000 2550 5350 2550
 Wire Wire Line
 	4400 2550 4400 2600
 Wire Wire Line
 	4400 3500 4400 3900
 Wire Wire Line
-	2400 3900 10100 3900
+	2400 3900 4400 3900
+Wire Wire Line
+	4400 3900 6850 3900
+Wire Wire Line
+	6850 3900 10100 3900
 Wire Wire Line
 	2400 3900 2400 2650
 Wire Wire Line
@@ -377,9 +397,17 @@ Connection ~ 4400 3900
 Wire Wire Line
 	5750 1550 5750 2000
 Wire Wire Line
-	5100 1550 5900 1550
+	5100 1550 5400 1550
 Wire Wire Line
-	5100 1550 5100 2750
+	5400 1550 5750 1550
+Wire Wire Line
+	5750 1550 5900 1550
+Wire Wire Line
+	5100 1550 5100 2050
+Wire Wire Line
+	5100 2050 5100 2650
+Wire Wire Line
+	5100 2650 5100 2750
 Wire Wire Line
 	5100 2050 5350 2050
 Connection ~ 5750 1550
@@ -397,7 +425,9 @@ Wire Wire Line
 	5100 2750 5350 2750
 Connection ~ 5100 2050
 Wire Wire Line
-	1750 4600 5100 4600
+	1750 4600 2850 4600
+Wire Wire Line
+	2850 4600 5100 4600
 Wire Wire Line
 	2850 4600 2850 2850
 Wire Wire Line
@@ -410,11 +440,15 @@ Connection ~ 2850 4600
 Wire Wire Line
 	6750 2350 6850 2350
 Wire Wire Line
-	5200 2350 5350 2350
+	5200 2350 5250 2350
+Wire Wire Line
+	5250 2350 5350 2350
 Wire Wire Line
 	5350 2250 5250 2250
 Wire Wire Line
-	5250 2150 5250 2350
+	5250 2150 5250 2250
+Wire Wire Line
+	5250 2250 5250 2350
 Connection ~ 5250 2350
 Wire Wire Line
 	5250 2150 5350 2150
@@ -422,7 +456,9 @@ Connection ~ 5250 2250
 Wire Wire Line
 	4750 3600 4750 3650
 Wire Wire Line
-	4750 2800 4750 3300
+	4750 2800 4750 3000
+Wire Wire Line
+	4750 3000 4750 3300
 Wire Wire Line
 	4150 3000 4300 3000
 Wire Wire Line
@@ -433,11 +469,15 @@ Wire Wire Line
 	6850 3200 6850 3900
 Connection ~ 6850 3900
 Wire Wire Line
-	8150 3100 10100 3100
+	8150 3100 8300 3100
+Wire Wire Line
+	8300 3100 10100 3100
 Wire Wire Line
 	6850 2350 6850 3000
 Wire Wire Line
-	6700 3000 6950 3000
+	6700 3000 6850 3000
+Wire Wire Line
+	6850 3000 6950 3000
 Wire Wire Line
 	1750 4800 5350 4800
 Wire Wire Line
@@ -445,26 +485,34 @@ Wire Wire Line
 Wire Wire Line
 	1750 5000 5350 5000
 Wire Wire Line
-	5750 4450 5750 4750
+	5750 4450 5750 4600
 Wire Wire Line
-	5750 4600 6950 4600
+	5750 4600 5750 4750
+Wire Wire Line
+	5750 4600 6850 4600
+Wire Wire Line
+	6850 4600 7000 4600
 Connection ~ 5750 4600
 Wire Wire Line
-	7250 4600 7350 4600
+	7300 4600 7350 4600
 Wire Wire Line
 	7350 4600 7350 4850
 Wire Wire Line
-	5750 5650 5750 5950
+	5750 5650 5750 5750
+Wire Wire Line
+	5750 5750 5750 5950
 Wire Wire Line
 	2950 2550 2750 2550
 Wire Wire Line
 	2750 2550 2750 4200
 Wire Wire Line
-	8300 5500 6750 5500
+	8300 5500 6950 5500
 Wire Wire Line
-	6900 5500 6900 4200
+	6950 5500 6750 5500
 Wire Wire Line
-	6900 4200 2750 4200
+	6950 5500 6950 4200
+Wire Wire Line
+	6950 4200 2750 4200
 Wire Wire Line
 	5000 2550 5000 5250
 Wire Wire Line
@@ -481,9 +529,11 @@ Wire Wire Line
 Wire Wire Line
 	5200 5750 5200 5600
 Wire Wire Line
-	5200 5600 5350 5600
+	5200 5600 5300 5600
+Wire Wire Line
+	5300 5600 5350 5600
 Connection ~ 5750 5750
-Connection ~ 6900 5500
+Connection ~ 6950 5500
 Wire Wire Line
 	10100 4150 8300 4150
 Wire Wire Line
@@ -492,7 +542,9 @@ Wire Wire Line
 	8300 3500 8600 3500
 Connection ~ 8300 3100
 Wire Wire Line
-	9500 3500 10100 3500
+	9500 3500 9600 3500
+Wire Wire Line
+	9600 3500 10100 3500
 Wire Wire Line
 	9600 3500 9600 3800
 Wire Wire Line
@@ -544,9 +596,11 @@ Wire Wire Line
 	6700 3600 6650 3600
 Wire Wire Line
 	5750 3600 5200 3600
-Connection ~ 6800 4600
+Connection ~ 6850 4600
 Wire Wire Line
-	8300 4150 8300 5500
+	8300 4150 8300 4450
+Wire Wire Line
+	8300 4450 8300 5500
 $Comp
 L 74HC04 U402
 U 3 1 58BC3468
@@ -568,4 +622,8 @@ IN_CMD_END_BIT
 Wire Wire Line
 	4500 3000 4750 3000
 Connection ~ 4750 3000
+Wire Wire Line
+	6850 4600 6850 5300
+Wire Wire Line
+	6850 5300 6750 5300
 $EndSCHEMATC
