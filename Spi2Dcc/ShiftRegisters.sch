@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 6 9
 Title "Trainiot SPI DCC"
 Date "2017-04-26"
-Rev "1.4"
+Rev "1.3"
 Comp "Lars Møllebjerg"
 Comment1 "Separate outputs for 3, 4, 5 & 6 byte commands."
 Comment2 "Once command can be retrieved from SPI while another command is being transmittet."

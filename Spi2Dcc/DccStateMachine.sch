@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 4 9
 Title "Trainiot SPI DCC"
 Date "2017-04-26"
-Rev "1.4"
+Rev "1.3"
 Comp "Lars Møllebjerg"
 Comment1 "The CMD_LENGTH_BITs are used to determine when to generate the command end bit."
 Comment2 "The DCC signal is used as a clock."
@@ -544,7 +544,6 @@ Wire Wire Line
 	6700 3600 6650 3600
 Wire Wire Line
 	5750 3600 5200 3600
-Connection ~ 6850 4600
 Wire Wire Line
 	8300 4150 8300 5500
 $Comp
@@ -568,10 +567,6 @@ IN_CMD_END_BIT
 Wire Wire Line
 	4500 3000 4750 3000
 Connection ~ 4750 3000
-Wire Wire Line
-	6850 4600 6850 5300
-Wire Wire Line
-	6850 5300 6750 5300
 NoConn ~ 6750 4800
 NoConn ~ 6750 4900
 NoConn ~ 6750 5000
@@ -584,4 +579,5 @@ NoConn ~ 6750 2050
 NoConn ~ 6750 2150
 NoConn ~ 6750 2250
 NoConn ~ 6750 2550
+NoConn ~ 6750 5300
 $EndSCHEMATC

@@ -36,8 +36,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 9
 Title "Trainiot SPI DCC"
-Date "2017-04-26"
-Rev "1.4"
+Date "2017-04-27"
+Rev "1.3"
 Comp "Lars Møllebjerg"
 Comment1 "SPI to cycle through commands for different decoders as required by the DCC protocol."
 Comment2 "It is not a full command station - it requires the device issuing the commands over"

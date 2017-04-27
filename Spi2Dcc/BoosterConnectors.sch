@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 9 9
 Title "Trainiot SPI DCC"
 Date "2017-04-26"
-Rev "1.4"
+Rev "1.3"
 Comp "Lars Møllebjerg"
 Comment1 "They must respect the BOOSTER_ENABLE signal and remove signal from the track when low."
 Comment2 "The boosters are expected to maintain isolation through optocouplers."

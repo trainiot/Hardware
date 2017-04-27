@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 7 9
 Title "Trainiot SPI DCC"
 Date "2017-04-26"
-Rev "1.4"
+Rev "1.3"
 Comp "Lars Møllebjerg"
 Comment1 "Off: Booster master switch off"
 Comment2 "Yellow: Boosters disabled."
