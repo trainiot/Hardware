@@ -120,5 +120,11 @@ $CMP 74LS596
 D 8 bits serial in // out Shift Register Open Collect.
 K HCMOS SR OpenCol
 $ENDCMP
+$CMP SN754410
+D Quadruple Half-H Driver, 1A per Driver.
+K TTL HALF-H
+$ENDCMP
+
+
 #
 #End Doc Library
