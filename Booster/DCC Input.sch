@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Booster-rescue
 LIBS:Trainiot
 LIBS:power
 LIBS:device
@@ -48,9 +49,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 6N136 U?
+L 6N136-RESCUE-Booster U?
 U 1 1 59E8F220
 P 5600 4450
+AR Path="/59E8F220" Ref="U?"  Part="1" 
+AR Path="/59E8EF77/59E8F220" Ref="U?"  Part="1" 
 F 0 "U?" H 5400 4750 50  0000 L CNN
 F 1 "6N136" H 5600 4750 50  0000 L CNN
 F 2 "Housings_DIP:DIP-8_W7.62mm" H 5400 4150 50  0001 L CIN
@@ -144,8 +147,6 @@ Wire Wire Line
 Wire Wire Line
 	6100 4350 6100 4250
 Connection ~ 6100 4250
-Wire Wire Line
-	5900 4550 8100 4550
 $Comp
 L GND #PWR?
 U 1 1 59E8F260
@@ -189,30 +190,14 @@ $EndComp
 $Comp
 L R R?
 U 1 1 59E8F277
-P 7000 5100
-F 0 "R?" V 7080 5100 50  0000 C CNN
-F 1 "10K" V 7000 5100 50  0000 C CNN
-F 2 "" V 6930 5100 50  0001 C CNN
-F 3 "" H 7000 5100 50  0001 C CNN
-	1    7000 5100
+P 7000 4400
+F 0 "R?" V 7080 4400 50  0000 C CNN
+F 1 "10K" V 7000 4400 50  0000 C CNN
+F 2 "" V 6930 4400 50  0001 C CNN
+F 3 "" H 7000 4400 50  0001 C CNN
+	1    7000 4400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7000 4950 7000 4550
-Connection ~ 7000 4550
-$Comp
-L GND #PWR?
-U 1 1 59E8F280
-P 7000 5400
-F 0 "#PWR?" H 7000 5150 50  0001 C CNN
-F 1 "GND" H 7000 5250 50  0000 C CNN
-F 2 "" H 7000 5400 50  0001 C CNN
-F 3 "" H 7000 5400 50  0001 C CNN
-	1    7000 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 5400 7000 5250
 Wire Wire Line
 	2350 3900 4200 3900
 Connection ~ 4200 3900
@@ -262,4 +247,7 @@ F 3 "" H 7000 3000 50  0001 C CNN
 	1    7000 3000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5900 4550 8100 4550
+Connection ~ 7000 4550
 $EndSCHEMATC

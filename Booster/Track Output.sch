@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Booster-rescue
 LIBS:Trainiot
 LIBS:power
 LIBS:device
