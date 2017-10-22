@@ -1,0 +1,238 @@
+EESchema Schematic File Version 2
+LIBS:Booster-rescue
+LIBS:Trainiot
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Booster-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM339 U?
+U 1 1 59ECA1E9
+P -3800 1950
+F 0 "U?" H -3800 2150 50  0000 L CNN
+F 1 "LM339" H -3800 1750 50  0000 L CNN
+F 2 "" H -3850 2050 50  0000 C CNN
+F 3 "" H -3750 2150 50  0000 C CNN
+	1    -3800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 59ECA201
+P 4650 3350
+F 0 "U?" H 4650 3550 50  0000 L CNN
+F 1 "LM339" H 4650 3150 50  0000 L CNN
+F 2 "" H 4600 3450 50  0000 C CNN
+F 3 "" H 4700 3550 50  0000 C CNN
+	1    4650 3350
+	1    0    0    -1  
+$EndComp
+Text HLabel 2400 5000 0    60   Input ~ 0
+Driver1A
+Text HLabel 2400 5300 0    60   Input ~ 0
+Driver1B
+Text HLabel 8450 5000 2    60   Output ~ 0
+Track1A
+Text HLabel 8450 5300 2    60   Output ~ 0
+Track1B
+Text HLabel 8450 3350 2    60   Output ~ 0
+Overcurrent
+$Comp
+L R R?
+U 1 1 59ECAA4F
+P 3250 5000
+F 0 "R?" V 3330 5000 50  0000 C CNN
+F 1 "R" V 3250 5000 50  0000 C CNN
+F 2 "" V 3180 5000 50  0000 C CNN
+F 3 "" H 3250 5000 50  0000 C CNN
+	1    3250 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59ECAA9F
+P 3250 5300
+F 0 "R?" V 3330 5300 50  0000 C CNN
+F 1 "R" V 3250 5300 50  0000 C CNN
+F 2 "" V 3180 5300 50  0000 C CNN
+F 3 "" H 3250 5300 50  0000 C CNN
+	1    3250 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 5300 8450 5300
+Wire Wire Line
+	3400 5000 8450 5000
+Wire Wire Line
+	2400 5000 3100 5000
+Wire Wire Line
+	3100 5300 2400 5300
+Wire Wire Line
+	4350 3450 3450 3450
+Wire Wire Line
+	3450 3450 3450 5000
+Connection ~ 3450 5000
+$Comp
+L POT_TRIM RV?
+U 1 1 59ECAFB3
+P 2650 2700
+F 0 "RV?" V 2475 2700 50  0000 C CNN
+F 1 "200K" V 2550 2700 50  0000 C CNN
+F 2 "" H 2650 2700 50  0000 C CNN
+F 3 "" H 2650 2700 50  0000 C CNN
+	1    2650 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 59ECC864
+P 2950 3500
+F 0 "R?" V 3030 3500 50  0000 C CNN
+F 1 "1K" V 2950 3500 50  0000 C CNN
+F 2 "" V 2880 3500 50  0000 C CNN
+F 3 "" H 2950 3500 50  0000 C CNN
+	1    2950 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 59ECC932
+P 2950 3000
+F 0 "R?" V 3030 3000 50  0000 C CNN
+F 1 "39K" V 2950 3000 50  0000 C CNN
+F 2 "" V 2880 3000 50  0000 C CNN
+F 3 "" H 2950 3000 50  0000 C CNN
+	1    2950 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 2700 2950 2700
+Wire Wire Line
+	2950 2700 2950 2850
+Wire Wire Line
+	2650 2550 2650 2300
+Wire Wire Line
+	4350 3250 2950 3250
+Wire Wire Line
+	2950 3150 2950 3350
+Connection ~ 2950 3250
+$Comp
+L GND #PWR?
+U 1 1 59ECCA64
+P 2950 3850
+F 0 "#PWR?" H 2950 3600 50  0001 C CNN
+F 1 "GND" H 2950 3700 50  0000 C CNN
+F 2 "" H 2950 3850 50  0000 C CNN
+F 3 "" H 2950 3850 50  0000 C CNN
+	1    2950 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3650 2950 3850
+Wire Wire Line
+	4950 3350 8450 3350
+$Comp
+L R R?
+U 1 1 59ECCCF2
+P 5200 2500
+F 0 "R?" V 5280 2500 50  0000 C CNN
+F 1 "R" V 5200 2500 50  0000 C CNN
+F 2 "" V 5130 2500 50  0000 C CNN
+F 3 "" H 5200 2500 50  0000 C CNN
+	1    5200 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2650 5200 4200
+$Comp
+L +12V #PWR?
+U 1 1 59ECD0B8
+P 4550 2350
+F 0 "#PWR?" H 4550 2200 50  0001 C CNN
+F 1 "+12V" H 4550 2490 50  0000 C CNN
+F 2 "" H 4550 2350 50  0000 C CNN
+F 3 "" H 4550 2350 50  0000 C CNN
+	1    4550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3050 4550 2350
+$Comp
+L LM339 U?
+U 1 1 59ECD971
+P 4650 4200
+F 0 "U?" H 4650 4400 50  0000 L CNN
+F 1 "LM339" H 4650 4000 50  0000 L CNN
+F 2 "" H 4600 4300 50  0000 C CNN
+F 3 "" H 4700 4400 50  0000 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3250 3950 4100
+Wire Wire Line
+	3950 4100 4350 4100
+Connection ~ 3950 3250
+Wire Wire Line
+	4350 4300 3950 4300
+Wire Wire Line
+	3950 4300 3950 5300
+Connection ~ 3950 5300
+Wire Wire Line
+	5200 4200 4950 4200
+Connection ~ 5200 3350
+$Comp
+L +5V #PWR?
+U 1 1 59ECDFA5
+P 2650 2300
+F 0 "#PWR?" H 2650 2150 50  0001 C CNN
+F 1 "+5V" H 2650 2440 50  0000 C CNN
+F 2 "" H 2650 2300 50  0000 C CNN
+F 3 "" H 2650 2300 50  0000 C CNN
+	1    2650 2300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

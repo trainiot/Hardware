@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -217,19 +217,8 @@ Wire Wire Line
 	6500 4150 6500 5600
 Wire Wire Line
 	6500 5600 9150 5600
-$Comp
-L Screw_Terminal_01x02 J?
-U 1 1 59E91272
-P 9350 5500
-F 0 "J?" H 9350 5600 50  0000 C CNN
-F 1 "Track output" H 9350 5300 50  0000 C CNN
-F 2 "" H 9350 5500 50  0001 C CNN
-F 3 "" H 9350 5500 50  0001 C CNN
-	1    9350 5500
-	1    0    0    -1  
-$EndComp
-Text Label 8200 5500 0    60   ~ 0
-Track_output_1
-Text Label 8200 5600 0    60   ~ 0
-Track_output_2
+Text HLabel 9150 5500 2    60   Output ~ 0
+Driver1B
+Text HLabel 9150 5600 2    60   Output ~ 0
+Driver1A
 $EndSCHEMATC
