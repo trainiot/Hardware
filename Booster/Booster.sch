@@ -65,8 +65,8 @@ $EndSheet
 $Sheet
 S 6150 3950 1250 600 
 U 59E90CBD
-F0 "Track Output" 60
-F1 "Track Output.sch" 60
+F0 "Driver" 60
+F1 "Driver.sch" 60
 F2 "DCC_Enable" I L 6150 4250 60 
 F3 "DCC" I L 6150 4100 60 
 $EndSheet
