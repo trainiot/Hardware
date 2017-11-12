@@ -63,38 +63,38 @@ F0 "Power" 60
 F1 "Power.sch" 60
 $EndSheet
 $Sheet
-S 5200 3950 1250 600 
+S 8550 3950 1250 600 
 U 59E90CBD
 F0 "Driver" 60
 F1 "Driver.sch" 60
-F2 "DCC_Enable" I L 5200 4250 60 
-F3 "DCC" I L 5200 4100 60 
-F4 "Driver1B" O R 6450 4250 60 
-F5 "Driver1A" O R 6450 4100 60 
+F2 "DCC" I L 8550 4100 60 
+F3 "TrackA" O R 9800 4100 60 
+F4 "TrackB" O R 9800 4250 60 
+F5 "VCC_Driver" I L 8550 4400 60 
+F6 "Enable_Driver" I L 8550 4250 60 
 $EndSheet
 Wire Wire Line
-	2200 4250 5200 4250
+	2200 4250 8550 4250
 Wire Wire Line
-	2200 4100 5200 4100
+	2200 4100 8550 4100
 $Sheet
-S 7200 3950 1250 650 
+S 2850 4500 1250 650 
 U 59ECA16F
 F0 "Overcurrent Detector" 60
 F1 "OvercurrentDetector.sch" 60
-F2 "Driver1A" I L 7200 4100 60 
-F3 "Driver1B" I L 7200 4250 60 
-F4 "Track1A" O R 8450 4100 60 
-F5 "Track1B" O R 8450 4250 60 
-F6 "~Overcurrent" O R 8450 4450 60 
+F2 "~Overcurrent" O R 4100 5000 60 
+F3 "VCC_Driver" O R 4100 4700 60 
 $EndSheet
-Wire Wire Line
-	6450 4250 7200 4250
-Wire Wire Line
-	6450 4100 7200 4100
 $Sheet
-S 3350 4950 1500 700 
+S 5250 4950 1500 700 
 U 59F0C14F
 F0 "Status" 60
 F1 "Status.sch" 60
 $EndSheet
+Wire Wire Line
+	4100 4700 6050 4700
+Wire Wire Line
+	6050 4700 6050 4400
+Wire Wire Line
+	6050 4400 8550 4400
 $EndSCHEMATC
