@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -49,7 +49,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text HLabel 8100 6050 2    60   Output ~ 0
-~Overcurrent
+~OVERCURRENT
 $Comp
 L R R?
 U 1 1 59ECC864
@@ -119,7 +119,7 @@ F 3 "" H 4100 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 8350 1000 2    60   Output ~ 0
-VCC_Driver
+VCC_DRIVER
 $Comp
 L LM358 U?
 U 1 1 5A071933

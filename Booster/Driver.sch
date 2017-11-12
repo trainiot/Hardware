@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -106,18 +106,14 @@ F 3 "" H 7650 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 1800 6950 2350
-Wire Wire Line
-	6950 2350 6950 2450
+	6950 1800 6950 2450
 Connection ~ 6950 2350
 Wire Wire Line
 	6950 2900 6950 2750
 Wire Wire Line
 	7650 2900 7650 2750
 Wire Wire Line
-	7650 1350 7650 2350
-Wire Wire Line
-	7650 2350 7650 2450
+	7650 1350 7650 2450
 Wire Wire Line
 	7650 2350 7350 2350
 $Comp
@@ -132,27 +128,17 @@ F 3 "" H 5400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 3850 5900 4000
-Wire Wire Line
-	5900 4000 5900 5600
+	5900 3850 5900 5600
 Wire Wire Line
 	5900 3850 6650 3850
 Wire Wire Line
 	6650 3950 6350 3950
 Wire Wire Line
-	4550 3750 6300 3750
-Wire Wire Line
-	6300 3750 6650 3750
+	4550 3750 6650 3750
 Wire Wire Line
 	7050 4650 7050 4900
 Wire Wire Line
-	7050 4900 7150 4900
-Wire Wire Line
-	7150 4900 7200 4900
-Wire Wire Line
-	7200 4900 7250 4900
-Wire Wire Line
-	7250 4900 7350 4900
+	7050 4900 7350 4900
 Wire Wire Line
 	7200 4900 7200 5150
 Wire Wire Line
@@ -194,21 +180,17 @@ Wire Wire Line
 Wire Wire Line
 	7250 2350 7250 3250
 Text HLabel 4550 3750 0    60   Input ~ 0
-Enable_Driver
+DRIVER_ENABLE
 Text HLabel 4500 4350 0    60   Input ~ 0
-DCC
+DRIVER_SIGNAL
 Wire Wire Line
 	5900 4000 5850 4000
 Wire Wire Line
-	4500 4350 4850 4350
-Wire Wire Line
-	4850 4350 6350 4350
+	4500 4350 6350 4350
 Wire Wire Line
 	4950 4000 4850 4000
 Wire Wire Line
-	4850 4000 4850 4350
-Wire Wire Line
-	4850 4350 4850 5500
+	4850 4000 4850 5500
 Connection ~ 4850 4350
 Wire Wire Line
 	6350 4350 6350 3950
@@ -217,23 +199,19 @@ Wire Wire Line
 Wire Wire Line
 	6600 4250 6600 5950
 Wire Wire Line
-	6600 5950 8000 5950
-Wire Wire Line
-	8000 5950 9150 5950
+	6600 5950 9150 5950
 Wire Wire Line
 	6650 4150 6500 4150
 Wire Wire Line
 	6500 4150 6500 6050
 Wire Wire Line
-	6500 6050 8100 6050
-Wire Wire Line
-	8100 6050 9150 6050
+	6500 6050 9150 6050
 Text HLabel 9150 5950 2    60   Output ~ 0
 TrackA
 Text HLabel 9150 6050 2    60   Output ~ 0
 TrackB
 Text HLabel 4700 1350 0    60   Input ~ 0
-VCC_Driver
+VCC_DRIVER
 Wire Wire Line
 	7650 1350 4700 1350
 Wire Wire Line

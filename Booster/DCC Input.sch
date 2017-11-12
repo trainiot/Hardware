@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title "Trainiot Booster"
 Date ""
 Rev ""
@@ -220,7 +220,7 @@ DCC_Input
 Text HLabel 8100 4550 2    60   Output ~ 0
 DCC
 Text HLabel 8100 3550 2    60   Output ~ 0
-DCC_Enable
+DCC_ENABLE
 $Comp
 L +5V #PWR?
 U 1 1 59E8F78D
