@@ -250,4 +250,30 @@ $EndComp
 Wire Wire Line
 	5900 4550 8100 4550
 Connection ~ 7000 4550
+$Comp
+L Conn_01x03 J?
+U 1 1 5A10589A
+P 3850 4800
+F 0 "J?" H 3850 5000 50  0000 C CNN
+F 1 "DaisyChain" H 3850 4600 50  0000 C CNN
+F 2 "" H 3850 4800 50  0001 C CNN
+F 3 "" H 3850 4800 50  0001 C CNN
+	1    3850 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4700 3600 4700
+Wire Wire Line
+	3600 4700 3600 3900
+Connection ~ 3600 3900
+Wire Wire Line
+	3500 4800 3650 4800
+Wire Wire Line
+	3400 4100 3400 4900
+Wire Wire Line
+	3400 4900 3650 4900
+Connection ~ 3400 4100
+Wire Wire Line
+	3500 4000 3500 4800
+Connection ~ 3500 4000
 $EndSCHEMATC
