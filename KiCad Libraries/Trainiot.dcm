@@ -127,7 +127,12 @@ K TTL HALF-H
 $ENDCMP
 #
 $CMP SW_SPST_x02
-D Single Pole Single Throw (SPST) switch
+D Dual Single Pole Single Throw (SPST) switch
+K switch lever
+$ENDCMP
+#
+$CMP SW_SPST_x03
+D Tripple Single Pole Single Throw (SPST) switch
 K switch lever
 $ENDCMP
 #
