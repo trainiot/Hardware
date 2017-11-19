@@ -54,8 +54,8 @@ Text HLabel 1450 3150 0    60   Input ~ 0
 ~OVERCURRENT
 Text HLabel 10250 2050 2    60   Output ~ 0
 DRIVER_ENABLE
-Text Notes 6350 6100 0    60   ~ 0
-LED status:\nOff: Master switch off\nGreen: DCC signal present and output\nYellow: DCC disabled (from central)\nRed: Overcurrent\nRED
+Text Notes 6050 5950 0    60   ~ 0
+LED status:\nOff: Master switch off\nGreen: DCC signal present and output\nYellow: DCC disabled (from central)\nRed: Overcurrent
 $Comp
 L LED_Dual_ACA D?
 U 1 1 5A08D8B5
