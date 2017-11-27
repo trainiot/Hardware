@@ -48,7 +48,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8100 6050 2    60   Output ~ 0
+Text HLabel 10300 4550 2    60   Output ~ 0
 ~OVERCURRENT
 $Comp
 L R R?
@@ -424,7 +424,7 @@ L C C?
 U 1 1 5A0886C0
 P 4600 6350
 F 0 "C?" H 4625 6450 50  0000 L CNN
-F 1 "100µF" H 4625 6250 50  0000 L CNN
+F 1 "1µF" H 4625 6250 50  0000 L CNN
 F 2 "" H 4638 6200 50  0001 C CNN
 F 3 "" H 4600 6350 50  0001 C CNN
 	1    4600 6350
@@ -444,7 +444,7 @@ L R R?
 U 1 1 5A0888DC
 P 4600 5450
 F 0 "R?" V 4680 5450 50  0000 C CNN
-F 1 "10K" V 4600 5450 50  0000 C CNN
+F 1 "1M" V 4600 5450 50  0000 C CNN
 F 2 "" V 4530 5450 50  0000 C CNN
 F 3 "" H 4600 5450 50  0000 C CNN
 	1    4600 5450
@@ -490,7 +490,7 @@ L R R?
 U 1 1 5A08A78E
 P 6150 5450
 F 0 "R?" V 6230 5450 50  0000 C CNN
-F 1 "22K" V 6150 5450 50  0000 C CNN
+F 1 "1M" V 6150 5450 50  0000 C CNN
 F 2 "" V 6080 5450 50  0000 C CNN
 F 3 "" H 6150 5450 50  0000 C CNN
 	1    6150 5450
@@ -558,7 +558,7 @@ L R R?
 U 1 1 5A090C58
 P 7750 5450
 F 0 "R?" V 7830 5450 50  0000 C CNN
-F 1 "R" V 7750 5450 50  0000 C CNN
+F 1 "10K" V 7750 5450 50  0000 C CNN
 F 2 "" V 7680 5450 50  0000 C CNN
 F 3 "" H 7750 5450 50  0000 C CNN
 	1    7750 5450
@@ -567,7 +567,7 @@ $EndComp
 Wire Wire Line
 	7600 6050 7750 6050
 Wire Wire Line
-	7750 6050 8100 6050
+	7750 6050 8150 6050
 Wire Wire Line
 	7750 6050 7750 5600
 Connection ~ 7750 6050
@@ -876,4 +876,39 @@ F 3 "" H 7750 6050 50  0001 C CNN
 	1    7750 6050
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	8150 6050 8150 4550
+Wire Wire Line
+	8150 4550 8550 4550
+Wire Wire Line
+	8550 4550 10300 4550
+Wire Wire Line
+	8550 4550 8550 4900
+Connection ~ 8550 4550
+$Comp
+L C C?
+U 1 1 5A19D624
+P 8550 5050
+F 0 "C?" H 8575 5150 50  0000 L CNN
+F 1 "C" H 8575 4950 50  0000 L CNN
+F 2 "" H 8588 4900 50  0000 C CNN
+F 3 "" H 8550 5050 50  0000 C CNN
+	1    8550 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5200 8550 5350
+$Comp
+L GND #PWR?
+U 1 1 5A19D713
+P 8550 5350
+F 0 "#PWR?" H 8550 5100 50  0001 C CNN
+F 1 "GND" H 8550 5200 50  0000 C CNN
+F 2 "" H 8550 5350 50  0000 C CNN
+F 3 "" H 8550 5350 50  0000 C CNN
+	1    8550 5350
+	1    0    0    -1  
+$EndComp
+Text Notes 8850 5700 0    60   ~ 0
+"Debounce" the release giving the other\ntiming caps time to discharge.\nExperiment show 100µF or higher is sufficent.\nShould investigate further why this is needed,\nthe plan was the detect dekay should give the\nrelease delay time to discharge and vice versa.
 $EndSCHEMATC
