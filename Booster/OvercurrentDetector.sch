@@ -83,8 +83,6 @@ F 3 "" H 2500 7100 50  0000 C CNN
 	1    2500 7100
 	1    0    0    -1  
 $EndComp
-Text Notes 8400 7650 0    60   ~ 0
-Sensitivity
 $Comp
 L LM350_TO220 U?
 U 1 1 59F4A74D
@@ -155,29 +153,19 @@ F 3 "" H 3900 2500 50  0000 C CNN
 $EndComp
 Connection ~ 2650 6150
 Wire Wire Line
-	2650 6050 2650 6150
-Wire Wire Line
-	2650 6150 2650 6250
+	2650 6050 2650 6250
 Wire Wire Line
 	2750 1400 2600 1400
 Wire Wire Line
 	2600 1400 2600 1200
 Wire Wire Line
-	3050 2900 3900 2900
+	3050 2900 4400 2900
 Wire Wire Line
-	3900 2900 4400 2900
-Wire Wire Line
-	4100 1350 4100 1400
-Wire Wire Line
-	4100 1400 4100 1650
+	4100 1350 4100 1650
 Wire Wire Line
 	4100 1050 4100 1000
 Wire Wire Line
-	4100 1000 4300 1000
-Wire Wire Line
-	4300 1000 4500 1000
-Wire Wire Line
-	4500 1000 8350 1000
+	4100 1000 8350 1000
 Wire Wire Line
 	4300 1000 4300 1050
 Connection ~ 4300 1400
@@ -187,19 +175,11 @@ Connection ~ 3050 2900
 Wire Wire Line
 	4100 1650 4150 1650
 Wire Wire Line
-	4300 1350 4300 1400
+	4300 1350 4300 1500
 Wire Wire Line
-	4300 1400 4300 1500
+	4300 1800 4300 1900
 Wire Wire Line
-	4300 1800 4300 1850
-Wire Wire Line
-	4300 1850 4300 1900
-Wire Wire Line
-	3350 1400 3450 1400
-Wire Wire Line
-	3450 1400 4100 1400
-Wire Wire Line
-	4100 1400 4300 1400
+	3350 1400 4300 1400
 Wire Wire Line
 	4500 1000 4500 1900
 Connection ~ 4500 1000
@@ -242,9 +222,7 @@ $EndComp
 Wire Wire Line
 	4700 2100 4900 2100
 Wire Wire Line
-	4900 1850 4900 2100
-Wire Wire Line
-	4900 2100 4900 2250
+	4900 1850 4900 2250
 Connection ~ 4900 2100
 $Comp
 L GND #PWR?
@@ -260,9 +238,7 @@ $EndComp
 Wire Wire Line
 	4900 2750 4900 2550
 Wire Wire Line
-	3050 1700 3050 2900
-Wire Wire Line
-	3050 2900 3050 3450
+	3050 1700 3050 3450
 $Comp
 L LM358 U?
 U 2 1 5A076258
@@ -286,9 +262,7 @@ F 3 "" H 3050 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 3750 3050 3900
-Wire Wire Line
-	3050 3900 3050 4000
+	3050 3750 3050 4000
 $Comp
 L R R?
 U 1 1 5A076AC0
@@ -301,9 +275,7 @@ F 3 "" H 3250 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 3750 3250 3900
-Wire Wire Line
-	3250 3900 3250 4000
+	3250 3750 3250 4000
 Wire Wire Line
 	3250 2050 3250 3450
 Wire Wire Line
@@ -396,9 +368,7 @@ F 3 "" H 2650 6800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2500 6800 2500 7000
-Wire Wire Line
-	2500 7000 2500 7100
+	2500 6800 2500 7100
 Wire Wire Line
 	2650 6650 2650 6550
 Wire Wire Line
@@ -431,13 +401,9 @@ F 3 "" H 4600 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 6050 4600 6050
+	4300 6050 5300 6050
 Wire Wire Line
-	4600 6050 5300 6050
-Wire Wire Line
-	4600 5600 4600 6050
-Wire Wire Line
-	4600 6050 4600 6200
+	4600 5600 4600 6200
 Connection ~ 4600 6050
 $Comp
 L R R?
@@ -465,71 +431,8 @@ F 3 "" H 5650 6150 50  0000 C CNN
 	3    5600 5950
 	1    0    0    -1  
 $EndComp
-$Comp
-L C C?
-U 1 1 5A08A5C9
-P 6150 6350
-F 0 "C?" H 6175 6450 50  0000 L CNN
-F 1 "100µF" H 6175 6250 50  0000 L CNN
-F 2 "" H 6188 6200 50  0001 C CNN
-F 3 "" H 6150 6350 50  0001 C CNN
-	1    6150 6350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5900 5950 6150 5950
-Wire Wire Line
-	6150 5950 7000 5950
-Wire Wire Line
-	6150 5600 6150 5950
-Wire Wire Line
-	6150 5950 6150 6200
-Connection ~ 6150 5950
-$Comp
-L R R?
-U 1 1 5A08A78E
-P 6150 5450
-F 0 "R?" V 6230 5450 50  0000 C CNN
-F 1 "1M" V 6150 5450 50  0000 C CNN
-F 2 "" V 6080 5450 50  0000 C CNN
-F 3 "" H 6150 5450 50  0000 C CNN
-	1    6150 5450
-	1    0    0    -1  
-$EndComp
-Text Notes 5950 7200 0    60   ~ 0
-Release delay\nlow = short
-$Comp
-L LM339 U?
-U 2 1 5A08AD2A
-P 7300 6050
-F 0 "U?" H 7300 6250 50  0000 L CNN
-F 1 "LM339" H 7300 5850 50  0000 L CNN
-F 2 "" H 7250 6150 50  0000 C CNN
-F 3 "" H 7350 6250 50  0000 C CNN
-	2    7300 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 6150 6650 6150
-$Comp
-L POT_TRIM RV?
-U 1 1 5A08B26B
-P 6500 6150
-F 0 "RV?" V 6400 6150 50  0000 C CNN
-F 1 "10K" V 6500 6150 50  0000 C CNN
-F 2 "" H 6500 6150 50  0001 C CNN
-F 3 "" H 6500 6150 50  0001 C CNN
-	1    6500 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6500 4950 6500 6000
-Wire Wire Line
-	6500 6300 6500 6850
-Wire Wire Line
-	3150 4600 3150 4800
-Wire Wire Line
-	3150 4800 3150 5950
+	3150 4600 3150 5950
 Wire Wire Line
 	3150 5950 3700 5950
 Wire Wire Line
@@ -553,24 +456,6 @@ Wire Wire Line
 	5000 6000 5000 6850
 Wire Wire Line
 	5300 5850 5150 5850
-$Comp
-L R R?
-U 1 1 5A090C58
-P 7750 5450
-F 0 "R?" V 7830 5450 50  0000 C CNN
-F 1 "10K" V 7750 5450 50  0000 C CNN
-F 2 "" V 7680 5450 50  0000 C CNN
-F 3 "" H 7750 5450 50  0000 C CNN
-	1    7750 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7600 6050 7750 6050
-Wire Wire Line
-	7750 6050 8150 6050
-Wire Wire Line
-	7750 6050 7750 5600
-Connection ~ 7750 6050
 $Comp
 L C C?
 U 1 1 5A09210C
@@ -596,9 +481,7 @@ $EndComp
 Wire Wire Line
 	3600 5700 3600 5600
 Wire Wire Line
-	3900 4950 3900 5150
-Wire Wire Line
-	3900 5150 3900 5750
+	3900 4950 3900 5750
 Wire Wire Line
 	3600 5300 3600 5150
 Wire Wire Line
@@ -626,43 +509,6 @@ F 3 "" H 5000 4950 50  0000 C CNN
 	1    5000 4950
 	1    0    0    -1  
 $EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5A092981
-P 6150 4950
-F 0 "#PWR?" H 6150 4800 50  0001 C CNN
-F 1 "+5V" H 6150 5090 50  0000 C CNN
-F 2 "" H 6150 4950 50  0000 C CNN
-F 3 "" H 6150 4950 50  0000 C CNN
-	1    6150 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5A0929DA
-P 6500 4950
-F 0 "#PWR?" H 6500 4800 50  0001 C CNN
-F 1 "+5V" H 6500 5090 50  0000 C CNN
-F 2 "" H 6500 4950 50  0000 C CNN
-F 3 "" H 6500 4950 50  0000 C CNN
-	1    6500 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5A092A33
-P 7750 4950
-F 0 "#PWR?" H 7750 4800 50  0001 C CNN
-F 1 "+5V" H 7750 5090 50  0000 C CNN
-F 2 "" H 7750 4950 50  0000 C CNN
-F 3 "" H 7750 4950 50  0000 C CNN
-	1    7750 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 4950 7750 5300
-Wire Wire Line
-	6150 5300 6150 4950
 $Comp
 L GND #PWR?
 U 1 1 5A0931C8
@@ -696,32 +542,8 @@ F 3 "" H 5000 6850 50  0000 C CNN
 	1    5000 6850
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND #PWR?
-U 1 1 5A0932D3
-P 6150 6850
-F 0 "#PWR?" H 6150 6600 50  0001 C CNN
-F 1 "GND" H 6150 6700 50  0000 C CNN
-F 2 "" H 6150 6850 50  0000 C CNN
-F 3 "" H 6150 6850 50  0000 C CNN
-	1    6150 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 5A09332C
-P 6500 6850
-F 0 "#PWR?" H 6500 6600 50  0001 C CNN
-F 1 "GND" H 6500 6700 50  0000 C CNN
-F 2 "" H 6500 6850 50  0000 C CNN
-F 3 "" H 6500 6850 50  0000 C CNN
-	1    6500 6850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3900 6350 3900 6850
-Wire Wire Line
-	6150 6500 6150 6850
 $Comp
 L +15V #PWR?
 U 1 1 5A093E23
@@ -823,28 +645,6 @@ F 3 "" H 5200 6050 50  0001 C CNN
 $EndComp
 $Comp
 L TEST TP?
-U 1 1 5A163B66
-P 6750 5950
-F 0 "TP?" H 6750 6250 50  0000 C BNN
-F 1 "TEST" H 6750 6200 50  0000 C CNN
-F 2 "" H 6750 5950 50  0001 C CNN
-F 3 "" H 6750 5950 50  0001 C CNN
-	1    6750 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST TP?
-U 1 1 5A163BC9
-P 6750 6150
-F 0 "TP?" H 6750 6450 50  0000 C BNN
-F 1 "TEST" H 6750 6400 50  0000 C CNN
-F 2 "" H 6750 6150 50  0001 C CNN
-F 3 "" H 6750 6150 50  0001 C CNN
-	1    6750 6150
-	-1   0    0    1   
-$EndComp
-$Comp
-L TEST TP?
 U 1 1 5A164434
 P 4750 1000
 F 0 "TP?" H 4750 1300 50  0000 C BNN
@@ -866,38 +666,18 @@ F 3 "" H 2600 1400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L TEST TP?
-U 1 1 5A16478A
-P 7750 6050
-F 0 "TP?" H 7750 6350 50  0000 C BNN
-F 1 "TEST" H 7750 6300 50  0000 C CNN
-F 2 "" H 7750 6050 50  0001 C CNN
-F 3 "" H 7750 6050 50  0001 C CNN
-	1    7750 6050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8150 6050 8150 4550
-Wire Wire Line
-	8150 4550 8550 4550
-Wire Wire Line
-	8550 4550 10300 4550
-Wire Wire Line
-	8550 4550 8550 4900
-Connection ~ 8550 4550
-$Comp
-L C C?
-U 1 1 5A19D624
-P 8550 5050
-F 0 "C?" H 8575 5150 50  0000 L CNN
-F 1 "C" H 8575 4950 50  0000 L CNN
-F 2 "" H 8588 4900 50  0000 C CNN
-F 3 "" H 8550 5050 50  0000 C CNN
-	1    8550 5050
+L NE555 U?
+U 1 1 5A369DFA
+P 6800 3350
+F 0 "U?" H 6400 3700 50  0000 L CNN
+F 1 "NE555" H 6400 3000 50  0000 L CNN
+F 2 "" H 6800 3350 50  0000 C CNN
+F 3 "" H 6800 3350 50  0000 C CNN
+	1    6800 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8550 5200 8550 5350
+Text Notes 8850 5700 0    60   ~ 0
+"Debounce" the release giving the other\ntiming caps time to discharge.\nExperiment show 100µF or higher is sufficent.\nShould investigate further why this is needed,\nthe plan was the detect dekay should give the\nrelease delay time to discharge and vice versa.
 $Comp
 L GND #PWR?
 U 1 1 5A19D713
@@ -909,6 +689,191 @@ F 3 "" H 8550 5350 50  0000 C CNN
 	1    8550 5350
 	1    0    0    -1  
 $EndComp
-Text Notes 8850 5700 0    60   ~ 0
-"Debounce" the release giving the other\ntiming caps time to discharge.\nExperiment show 100µF or higher is sufficent.\nShould investigate further why this is needed,\nthe plan was the detect dekay should give the\nrelease delay time to discharge and vice versa.
+Wire Wire Line
+	8550 5200 8550 5350
+$Comp
+L C C?
+U 1 1 5A19D624
+P 8550 5050
+F 0 "C?" H 8575 5150 50  0000 L CNN
+F 1 "C" H 8575 4950 50  0000 L CNN
+F 2 "" H 8588 4900 50  0000 C CNN
+F 3 "" H 8550 5050 50  0000 C CNN
+	1    8550 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 8550 4550
+Wire Wire Line
+	8550 4550 8550 4900
+Wire Wire Line
+	8150 4550 10300 4550
+Wire Wire Line
+	8150 6050 8150 4550
+$Comp
+L TEST TP?
+U 1 1 5A16478A
+P 7750 6050
+F 0 "TP?" H 7750 6350 50  0000 C BNN
+F 1 "TEST" H 7750 6300 50  0000 C CNN
+F 2 "" H 7750 6050 50  0001 C CNN
+F 3 "" H 7750 6050 50  0001 C CNN
+	1    7750 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 5A163BC9
+P 6750 6150
+F 0 "TP?" H 6750 6450 50  0000 C BNN
+F 1 "TEST" H 6750 6400 50  0000 C CNN
+F 2 "" H 6750 6150 50  0001 C CNN
+F 3 "" H 6750 6150 50  0001 C CNN
+	1    6750 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 5A163B66
+P 6750 5950
+F 0 "TP?" H 6750 6250 50  0000 C BNN
+F 1 "TEST" H 6750 6200 50  0000 C CNN
+F 2 "" H 6750 5950 50  0001 C CNN
+F 3 "" H 6750 5950 50  0001 C CNN
+	1    6750 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6500 6150 6850
+$Comp
+L GND #PWR?
+U 1 1 5A09332C
+P 6500 6850
+F 0 "#PWR?" H 6500 6600 50  0001 C CNN
+F 1 "GND" H 6500 6700 50  0000 C CNN
+F 2 "" H 6500 6850 50  0000 C CNN
+F 3 "" H 6500 6850 50  0000 C CNN
+	1    6500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A0932D3
+P 6150 6850
+F 0 "#PWR?" H 6150 6600 50  0001 C CNN
+F 1 "GND" H 6150 6700 50  0000 C CNN
+F 2 "" H 6150 6850 50  0000 C CNN
+F 3 "" H 6150 6850 50  0000 C CNN
+	1    6150 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5300 6150 4950
+Wire Wire Line
+	7750 4950 7750 5300
+$Comp
+L +5V #PWR?
+U 1 1 5A092A33
+P 7750 4950
+F 0 "#PWR?" H 7750 4800 50  0001 C CNN
+F 1 "+5V" H 7750 5090 50  0000 C CNN
+F 2 "" H 7750 4950 50  0000 C CNN
+F 3 "" H 7750 4950 50  0000 C CNN
+	1    7750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5A0929DA
+P 6500 4950
+F 0 "#PWR?" H 6500 4800 50  0001 C CNN
+F 1 "+5V" H 6500 5090 50  0000 C CNN
+F 2 "" H 6500 4950 50  0000 C CNN
+F 3 "" H 6500 4950 50  0000 C CNN
+	1    6500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5A092981
+P 6150 4950
+F 0 "#PWR?" H 6150 4800 50  0001 C CNN
+F 1 "+5V" H 6150 5090 50  0000 C CNN
+F 2 "" H 6150 4950 50  0000 C CNN
+F 3 "" H 6150 4950 50  0000 C CNN
+	1    6150 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 7750 6050
+Wire Wire Line
+	7750 6050 7750 5600
+Wire Wire Line
+	7600 6050 8150 6050
+$Comp
+L R R?
+U 1 1 5A090C58
+P 7750 5450
+F 0 "R?" V 7830 5450 50  0000 C CNN
+F 1 "10K" V 7750 5450 50  0000 C CNN
+F 2 "" V 7680 5450 50  0000 C CNN
+F 3 "" H 7750 5450 50  0000 C CNN
+	1    7750 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 6300 6500 6850
+Wire Wire Line
+	6500 4950 6500 6000
+$Comp
+L POT_TRIM RV?
+U 1 1 5A08B26B
+P 6500 6150
+F 0 "RV?" V 6400 6150 50  0000 C CNN
+F 1 "10K" V 6500 6150 50  0000 C CNN
+F 2 "" H 6500 6150 50  0001 C CNN
+F 3 "" H 6500 6150 50  0001 C CNN
+	1    6500 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 6150 6650 6150
+$Comp
+L LM339 U?
+U 2 1 5A08AD2A
+P 7300 6050
+F 0 "U?" H 7300 6250 50  0000 L CNN
+F 1 "LM339" H 7300 5850 50  0000 L CNN
+F 2 "" H 7250 6150 50  0000 C CNN
+F 3 "" H 7350 6250 50  0000 C CNN
+	2    7300 6050
+	1    0    0    -1  
+$EndComp
+Text Notes 5950 7200 0    60   ~ 0
+Release delay\nlow = short
+$Comp
+L R R?
+U 1 1 5A08A78E
+P 6150 5450
+F 0 "R?" V 6230 5450 50  0000 C CNN
+F 1 "1M" V 6150 5450 50  0000 C CNN
+F 2 "" V 6080 5450 50  0000 C CNN
+F 3 "" H 6150 5450 50  0000 C CNN
+	1    6150 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 5950
+Wire Wire Line
+	6150 5600 6150 6200
+Wire Wire Line
+	5900 5950 7000 5950
+$Comp
+L C C?
+U 1 1 5A08A5C9
+P 6150 6350
+F 0 "C?" H 6175 6450 50  0000 L CNN
+F 1 "100µF" H 6175 6250 50  0000 L CNN
+F 2 "" H 6188 6200 50  0001 C CNN
+F 3 "" H 6150 6350 50  0001 C CNN
+	1    6150 6350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
