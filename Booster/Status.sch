@@ -54,7 +54,7 @@ Text HLabel 1450 3650 0    60   Input ~ 0
 OVERCURRENT
 Text HLabel 10250 2050 2    60   Output ~ 0
 DRIVER_ENABLE
-Text Notes 6050 5950 0    60   ~ 0
+Text Notes 5500 5800 0    60   ~ 0
 LED status:\nOff: Master switch off\nGreen: DCC signal present and output\nYellow: DCC disabled (from central)\nRed: Overcurrent
 $Comp
 L LED_Dual_ACA D?
@@ -195,12 +195,12 @@ $EndComp
 $Comp
 L Conn_01x03 J?
 U 1 1 5A0BF38D
-P 7800 5050
-F 0 "J?" H 7800 5250 50  0000 C CNN
-F 1 "StatusLED" H 7800 4850 50  0000 C CNN
-F 2 "" H 7800 5050 50  0001 C CNN
-F 3 "" H 7800 5050 50  0001 C CNN
-	1    7800 5050
+P 7100 5050
+F 0 "J?" H 7100 5250 50  0000 C CNN
+F 1 "StatusLED" H 7100 4850 50  0000 C CNN
+F 2 "" H 7100 5050 50  0001 C CNN
+F 3 "" H 7100 5050 50  0001 C CNN
+	1    7100 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -711,12 +711,12 @@ Connection ~ 5000 4700
 Wire Wire Line
 	6700 4350 8350 4350
 Wire Wire Line
-	6800 5050 7600 5050
+	6800 5050 6900 5050
 Connection ~ 6800 4350
 Wire Wire Line
-	7600 4950 5850 4950
+	6900 4950 5850 4950
 Wire Wire Line
-	5850 5150 7600 5150
+	5850 5150 6900 5150
 Wire Wire Line
 	8100 3150 8100 3500
 Connection ~ 8100 3150
@@ -1004,4 +1004,11 @@ Wire Wire Line
 Connection ~ 3350 2750
 Text Notes 2300 3950 0    60   ~ 0
 Acting as inverter
+Wire Wire Line
+	7800 4350 7800 6050
+Wire Wire Line
+	7800 6050 10100 6050
+Connection ~ 7800 4350
+Text HLabel 10100 6050 2    60   Output ~ 0
+MSTR_SW
 $EndSCHEMATC
