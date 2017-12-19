@@ -55,7 +55,7 @@ OVERCURRENT
 Text HLabel 10250 2050 2    60   Output ~ 0
 DRIVER_ENABLE
 Text Notes 5500 5800 0    60   ~ 0
-LED status:\nOff: Master switch off\nGreen: DCC signal present and output\nYellow: DCC disabled (from central)\nRed: Overcurrent
+LED status:\nOff: Master switch off\nGreen: DCC signal present and output\nYellow: No DCC signal\nRed: Overcurrent
 $Comp
 L LED_Dual_ACA D?
 U 1 1 5A08D8B5
@@ -92,34 +92,34 @@ $EndComp
 $Comp
 L BC327 Q?
 U 1 1 5A0BE3D7
-P 2900 5100
-F 0 "Q?" H 3100 5175 50  0000 L CNN
-F 1 "BC327" H 3100 5100 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 3100 5025 50  0001 L CIN
-F 3 "" H 2900 5100 50  0001 L CNN
-	1    2900 5100
+P 2800 3650
+F 0 "Q?" H 3000 3725 50  0000 L CNN
+F 1 "BC327" H 3000 3650 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 3000 3575 50  0001 L CIN
+F 3 "" H 2800 3650 50  0001 L CNN
+	1    2800 3650
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R?
 U 1 1 5A0BE434
-P 2300 5100
-F 0 "R?" V 2380 5100 50  0000 C CNN
-F 1 "1K" V 2300 5100 50  0000 C CNN
-F 2 "" V 2230 5100 50  0001 C CNN
-F 3 "" H 2300 5100 50  0001 C CNN
-	1    2300 5100
+P 2200 3650
+F 0 "R?" V 2280 3650 50  0000 C CNN
+F 1 "1K" V 2200 3650 50  0000 C CNN
+F 2 "" V 2130 3650 50  0001 C CNN
+F 3 "" H 2200 3650 50  0001 C CNN
+	1    2200 3650
 	0    1    1    0   
 $EndComp
 $Comp
 L +5V #PWR?
 U 1 1 5A0BE54E
-P 2350 5750
-F 0 "#PWR?" H 2350 5600 50  0001 C CNN
-F 1 "+5V" H 2350 5890 50  0000 C CNN
-F 2 "" H 2350 5750 50  0001 C CNN
-F 3 "" H 2350 5750 50  0001 C CNN
-	1    2350 5750
+P 2250 4300
+F 0 "#PWR?" H 2250 4150 50  0001 C CNN
+F 1 "+5V" H 2250 4440 50  0000 C CNN
+F 2 "" H 2250 4300 50  0001 C CNN
+F 3 "" H 2250 4300 50  0001 C CNN
+	1    2250 4300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -166,7 +166,7 @@ F 3 "" H 5700 3950 50  0001 C CNN
 	1    5700 3950
 	0    1    1    0   
 $EndComp
-Text Label 3300 4700 0    60   ~ 0
+Text Label 3600 4700 0    60   ~ 0
 STATUS_GREEN_LED
 Text Label 5150 3150 0    60   ~ 0
 STATUS_RED_LED
@@ -479,17 +479,6 @@ F 3 "" H 3700 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74LS86 U?
-U 1 1 5A0F5EBC
-P 2550 3550
-F 0 "U?" H 2600 3600 50  0000 C CNN
-F 1 "74LS86" H 2600 3500 50  0000 C CNN
-F 2 "" H 2550 3550 50  0001 C CNN
-F 3 "" H 2550 3550 50  0001 C CNN
-	1    2550 3550
-	1    0    0    -1  
-$EndComp
-$Comp
 L SW_SPST_x03 SW?
 U 1 1 5A1062CE
 P 8100 3700
@@ -606,8 +595,6 @@ F 3 "" H 4000 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 3650 1750 5100
-Wire Wire Line
 	6800 2150 7050 2150
 Wire Wire Line
 	6800 2150 6800 5050
@@ -626,20 +613,17 @@ Wire Wire Line
 	7950 3150 7950 2850
 Connection ~ 7950 2850
 Wire Wire Line
-	1750 5100 2150 5100
-Connection ~ 1750 3650
+	1450 3650 2050 3650
 Wire Wire Line
-	2450 5100 2700 5100
+	2350 3650 2600 3650
 Wire Wire Line
-	3000 5300 3000 6150
+	2900 3850 2900 4700
 Wire Wire Line
-	3000 6150 2350 6150
+	2900 4700 2250 4700
 Wire Wire Line
-	2350 6150 2350 5750
+	2250 4700 2250 4300
 Wire Wire Line
-	3000 4900 3000 4700
-Wire Wire Line
-	3000 4700 5550 4700
+	2900 2950 2900 3450
 Wire Wire Line
 	6100 4250 5950 4250
 Wire Wire Line
@@ -660,8 +644,7 @@ Connection ~ 5200 3950
 Wire Wire Line
 	5000 5150 5550 5150
 Wire Wire Line
-	5000 5150 5000 4700
-Connection ~ 5000 4700
+	5000 4700 5000 5150
 Wire Wire Line
 	6700 4350 8350 4350
 Wire Wire Line
@@ -807,7 +790,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 6900 3700 7200
 Wire Wire Line
-	3350 2050 3350 3550
+	3350 2050 3350 4700
 Wire Wire Line
 	3350 2050 3450 2050
 Wire Wire Line
@@ -866,12 +849,6 @@ Wire Wire Line
 	6600 2300 6600 1950
 Connection ~ 6600 1950
 Wire Wire Line
-	1450 3650 1950 3650
-Wire Wire Line
-	3350 3550 3150 3550
-Text Notes 2300 3950 0    60   ~ 0
-Acting as inverter
-Wire Wire Line
 	7800 4350 7800 6050
 Wire Wire Line
 	7800 6050 10100 6050
@@ -879,24 +856,14 @@ Connection ~ 7800 4350
 Text HLabel 10100 6050 2    60   Output ~ 0
 MSTR_SW
 Wire Wire Line
-	1950 3450 1750 3450
-Wire Wire Line
-	1750 3450 1750 3150
-$Comp
-L +5V #PWR?
-U 1 1 5A390297
-P 1750 3150
-F 0 "#PWR?" H 1750 3000 50  0001 C CNN
-F 1 "+5V" H 1750 3290 50  0000 C CNN
-F 2 "" H 1750 3150 50  0000 C CNN
-F 3 "" H 1750 3150 50  0000 C CNN
-	1    1750 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	1400 1850 3450 1850
 Text Notes 8200 1800 0    60   ~ 0
 ~enable
 Text Notes 9900 1800 0    60   ~ 0
 enable
+Wire Wire Line
+	3350 4700 5000 4700
+Wire Wire Line
+	2900 2950 3350 2950
+Connection ~ 3350 2950
 $EndSCHEMATC
