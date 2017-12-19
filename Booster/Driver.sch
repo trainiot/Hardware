@@ -262,6 +262,4 @@ Wire Wire Line
 	6350 3950 6350 5500
 Text Notes 3550 4600 0    60   ~ 0
 XOR as NOT
-Text Notes 2600 3450 0    60   ~ 0
-TODO: Add test override dipswitch? To give constant track output\nvoltage that is easy to check.\nDipswitch disables driver_enable and let a pull up resistor connect the signal.
 $EndSCHEMATC
