@@ -70,8 +70,6 @@ F 3 "" H 3650 4800 50  0001 C CNN
 	1    3650 4800
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1550 4800 3500 4800
 $Comp
 L C C201
 U 1 1 59E8F24E
@@ -105,8 +103,6 @@ F 3 "" H 5400 4500 50  0001 C CNN
 	1    5400 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1550 4900 3450 4900
 Text Label 1650 4800 0    60   ~ 0
 DCC_GND_Input
 Text Label 1650 4900 0    60   ~ 0
@@ -137,16 +133,6 @@ F 3 "" H 7550 1250 50  0001 C CNN
 	1    7550 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2900 5250 2850 5250
-Wire Wire Line
-	2850 5250 2850 4900
-Connection ~ 2850 4900
-Wire Wire Line
-	2650 4800 2650 5350
-Wire Wire Line
-	2650 5350 2900 5350
-Connection ~ 2650 4800
 $Comp
 L D D201
 U 1 1 5A383862
@@ -158,8 +144,6 @@ F 3 "" H 6900 2500 50  0000 C CNN
 	1    6900 2500
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6900 1600 6900 2350
 $Comp
 L C C202
 U 1 1 5A3839FB
@@ -171,10 +155,6 @@ F 3 "" H 7150 2200 50  0000 C CNN
 	1    7150 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6600 1850 8550 1850
-Wire Wire Line
-	7150 2350 7150 2700
 $Comp
 L GND #PWR04
 U 1 1 5A383AD2
@@ -186,10 +166,6 @@ F 3 "" H 7150 2700 50  0000 C CNN
 	1    7150 2700
 	1    0    0    -1  
 $EndComp
-Connection ~ 7150 1850
-Connection ~ 6800 5000
-Wire Wire Line
-	3450 4900 3450 5000
 $Comp
 L LM339 U203
 U 2 1 5A38E473
@@ -223,20 +199,6 @@ F 3 "" H 7550 2300 50  0000 C CNN
 	1    7550 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7550 2450 7550 2550
-Wire Wire Line
-	7550 2550 7150 2550
-Connection ~ 7150 2550
-Wire Wire Line
-	7550 1350 7550 1250
-Wire Wire Line
-	7150 1850 7150 2050
-Wire Wire Line
-	7550 1650 7550 2150
-Wire Wire Line
-	7550 2050 8550 2050
-Connection ~ 7550 2050
 $Comp
 L R R203
 U 1 1 5A38E85E
@@ -248,8 +210,6 @@ F 3 "" H 6600 2300 50  0000 C CNN
 	1    6600 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6600 2450 6600 2600
 $Comp
 L GND #PWR05
 U 1 1 5A38E8FE
@@ -261,14 +221,6 @@ F 3 "" H 6600 2600 50  0000 C CNN
 	1    6600 2600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6600 2150 6600 1850
-Connection ~ 6900 1850
-Wire Wire Line
-	9050 1950 9700 1950
-Wire Wire Line
-	9150 1950 9150 1550
-Connection ~ 9150 1950
 $Comp
 L R R206
 U 1 1 5A38EA64
@@ -280,8 +232,6 @@ F 3 "" H 9150 1400 50  0000 C CNN
 	1    9150 1400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9150 1250 9150 1050
 $Comp
 L +5V #PWR06
 U 1 1 5A38EB05
@@ -306,8 +256,6 @@ F 3 "" H 6900 1400 50  0001 C CNN
 	1    6900 1400
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6900 1200 6900 1050
 $Comp
 L +5V #PWR07
 U 1 1 5A38FAC1
@@ -341,10 +289,6 @@ F 3 "" H 1350 4850 50  0000 C CNN
 	1    1350 4850
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4650 5100 4800 5100
-Wire Wire Line
-	4650 5000 9250 5000
 $Comp
 L GND #PWR08
 U 1 1 5A3A1465
@@ -356,12 +300,6 @@ F 3 "" H 4900 4250 50  0001 C CNN
 	1    4900 4250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4900 4250 4900 4200
-Wire Wire Line
-	4700 3800 4900 3800
-Wire Wire Line
-	4900 3600 4900 3900
 $Comp
 L +5V #PWR09
 U 1 1 5A3A1566
@@ -373,17 +311,6 @@ F 3 "" H 4900 3600 50  0001 C CNN
 	1    4900 3600
 	1    0    0    -1  
 $EndComp
-Connection ~ 4900 3800
-Wire Wire Line
-	4650 4700 4700 4700
-Wire Wire Line
-	4700 3800 4700 4800
-Wire Wire Line
-	4800 5100 4800 5250
-Wire Wire Line
-	5400 4650 5400 5000
-Wire Wire Line
-	5400 4350 5400 4200
 $Comp
 L 74HC86 Y701
 U 1 1 5A3AC211
@@ -395,20 +322,6 @@ F 3 "" H 6900 3550 50  0000 C CNN
 	1    6900 3550
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3450 5000 4050 5000
-Wire Wire Line
-	3800 4800 4050 4800
-Wire Wire Line
-	6800 4150 6800 5000
-Wire Wire Line
-	6900 2950 6900 2650
-Wire Wire Line
-	7000 4150 7000 4400
-Wire Wire Line
-	7000 4400 7600 4400
-Wire Wire Line
-	7600 4400 7600 4100
 $Comp
 L +5V #PWR010
 U 1 1 5A3ACB63
@@ -420,10 +333,6 @@ F 3 "" H 7600 4100 50  0001 C CNN
 	1    7600 4100
 	1    0    0    -1  
 $EndComp
-Connection ~ 5400 5000
-Wire Wire Line
-	4700 4800 4650 4800
-Connection ~ 4700 4700
 $Comp
 L TEST TP?
 U 1 1 5A3E0919
@@ -435,5 +344,108 @@ F 3 "" H 9400 1950 50  0000 C CNN
 	1    9400 1950
 	-1   0    0    1   
 $EndComp
+$Comp
+L TEST TP?
+U 1 1 5A3F7C3F
+P 8050 1850
+F 0 "TP?" H 8050 2150 50  0000 C BNN
+F 1 "TEST" H 8050 2100 50  0000 C CNN
+F 2 "" H 8050 1850 50  0000 C CNN
+F 3 "" H 8050 1850 50  0000 C CNN
+	1    8050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1850 8550 1850
+Connection ~ 8050 1850
 Connection ~ 9400 1950
+Connection ~ 4700 4700
+Wire Wire Line
+	4700 4800 4650 4800
+Connection ~ 5400 5000
+Wire Wire Line
+	7600 4400 7600 4100
+Wire Wire Line
+	7000 4400 7600 4400
+Wire Wire Line
+	7000 4150 7000 4400
+Wire Wire Line
+	6900 2950 6900 2650
+Wire Wire Line
+	6800 4150 6800 5000
+Wire Wire Line
+	3800 4800 4050 4800
+Wire Wire Line
+	3450 5000 4050 5000
+Wire Wire Line
+	5400 4350 5400 4200
+Wire Wire Line
+	5400 4650 5400 5000
+Wire Wire Line
+	4800 5100 4800 5250
+Wire Wire Line
+	4700 3800 4700 4800
+Wire Wire Line
+	4650 4700 4700 4700
+Connection ~ 4900 3800
+Wire Wire Line
+	4900 3600 4900 3900
+Wire Wire Line
+	4700 3800 4900 3800
+Wire Wire Line
+	4900 4250 4900 4200
+Wire Wire Line
+	4650 5000 9250 5000
+Wire Wire Line
+	4650 5100 4800 5100
+Wire Wire Line
+	6900 1200 6900 1050
+Wire Wire Line
+	9150 1250 9150 1050
+Connection ~ 9150 1950
+Wire Wire Line
+	9150 1950 9150 1550
+Wire Wire Line
+	9050 1950 9700 1950
+Connection ~ 6900 1850
+Wire Wire Line
+	6600 2150 6600 1850
+Wire Wire Line
+	6600 2450 6600 2600
+Connection ~ 7550 2050
+Wire Wire Line
+	7550 2050 8550 2050
+Wire Wire Line
+	7550 1650 7550 2150
+Wire Wire Line
+	7150 1850 7150 2050
+Wire Wire Line
+	7550 1350 7550 1250
+Connection ~ 7150 2550
+Wire Wire Line
+	7550 2550 7150 2550
+Wire Wire Line
+	7550 2450 7550 2550
+Wire Wire Line
+	3450 4900 3450 5000
+Connection ~ 6800 5000
+Connection ~ 7150 1850
+Wire Wire Line
+	7150 2350 7150 2700
+Wire Wire Line
+	6900 1600 6900 2350
+Connection ~ 2650 4800
+Wire Wire Line
+	2650 5350 2900 5350
+Wire Wire Line
+	2650 4800 2650 5350
+Connection ~ 2850 4900
+Wire Wire Line
+	2850 5250 2850 4900
+Wire Wire Line
+	2900 5250 2850 5250
+Wire Wire Line
+	1550 4900 3450 4900
+Wire Wire Line
+	1550 4800 3500 4800
 $EndSCHEMATC

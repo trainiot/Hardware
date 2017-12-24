@@ -659,7 +659,7 @@ Connection ~ 4500 1000
 Wire Wire Line
 	4400 2900 4400 2500
 Wire Wire Line
-	3900 2650 3900 2900
+	3900 2900 3900 2650
 Connection ~ 3900 2900
 Wire Wire Line
 	4300 1850 3900 1850
@@ -777,7 +777,7 @@ Connection ~ 8550 4000
 Wire Wire Line
 	7600 5300 7750 5300
 Wire Wire Line
-	7600 4300 7600 5300
+	7600 4100 7600 5300
 Wire Wire Line
 	8750 5100 9000 5100
 Wire Wire Line
@@ -856,10 +856,8 @@ F 3 "" H 9200 5300 50  0001 C CNN
 	1    9200 5300
 	0    1    1    0   
 $EndComp
-Text HLabel 6850 4300 0    60   Input ~ 0
+Text HLabel 5150 4200 0    60   Input ~ 0
 MSTR_SW
-Wire Wire Line
-	7600 4300 6850 4300
 Wire Wire Line
 	4500 1000 4500 1900
 Connection ~ 4500 1300
@@ -878,4 +876,23 @@ Connection ~ 5200 6050
 Wire Wire Line
 	5150 5850 5300 5850
 Connection ~ 5200 5850
+$Comp
+L 74LS08 U?
+U 3 1 5A3EBEE8
+P 6650 4100
+F 0 "U?" H 6650 4150 50  0000 C CNN
+F 1 "74HC08" H 6650 4050 50  0000 C CNN
+F 2 "" H 6650 4100 50  0000 C CNN
+F 3 "" H 6650 4100 50  0000 C CNN
+	3    6650 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4100 7600 4100
+Wire Wire Line
+	5150 4200 6050 4200
+Text HLabel 5150 4000 0    60   Input ~ 0
+DCC_ENABLE
+Wire Wire Line
+	5150 4000 6050 4000
 $EndSCHEMATC
