@@ -107,7 +107,7 @@ U 1 1 5A3994FE
 P 10500 4150
 F 0 "J101" H 10500 4250 50  0000 C CNN
 F 1 "Track" H 10500 3950 50  0000 C CNN
-F 2 "" H 10500 4150 50  0001 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 10500 4150 50  0001 C CNN
 F 3 "" H 10500 4150 50  0001 C CNN
 	1    10500 4150
 	1    0    0    -1  
