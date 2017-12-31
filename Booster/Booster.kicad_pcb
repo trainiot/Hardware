@@ -4532,7 +4532,7 @@
   )
 
   (module SMD_Packages:SOIC-14_N (layer F.Cu) (tedit 0) (tstamp 5A42A645)
-    (at 156.952 122.19 270)
+    (at 161.002 122.71 270)
     (descr "Module CMS SOJ 14 pins Large")
     (tags "CMS SOJ")
     (path /59E8EF77/5A38E473)
