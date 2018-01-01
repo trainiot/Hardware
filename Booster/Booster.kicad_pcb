@@ -3,7 +3,7 @@
   (general
     (links 248)
     (no_connects 0)
-    (area 99.924999 79.924999 197.075001 140.075001)
+    (area 91.919047 76.823809 197.075001 140.125)
     (thickness 1.6)
     (drawings 52)
     (tracks 1329)
@@ -5158,7 +5158,7 @@
     (tags "SMD DIP DIL PDIP SMDIP 2.54mm 9.53mm 375mil Clearance8mm")
     (path /59F0C14F/5A0ED61A)
     (attr smd)
-    (fp_text reference U604 (at 0 -3.6) (layer F.SilkS)
+    (fp_text reference U604 (at 6.635 -0.03 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value PC817 (at 0 3.6) (layer F.Fab)
