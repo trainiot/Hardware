@@ -1,4 +1,4 @@
-(module TO-220-3_Vertical_Single_Pin_Heatshield (layer F.Cu) (tedit 5A44F796)
+(module TO-220-3_Vertical_Single_Pin_Heatshield (layer F.Cu) (tedit 5A4A3B19)
   (descr "TO-220-3, Vertical, RM 2.54mm, Single pin heatshield")
   (tags "TO-220-3 Vertical RM 2.54mm Heatshield")
   (fp_text reference REF** (at 2.75 -8.25) (layer F.SilkS)
@@ -38,7 +38,7 @@
   (pad 1 thru_hole rect (at 0 0) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask))
   (pad 2 thru_hole oval (at 2.54 0) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask))
   (pad 3 thru_hole oval (at 5.08 0) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask))
-  (pad 2 thru_hole oval (at 2.54 -5.5) (size 2.3 2.3) (drill 1.5) (layers *.Cu *.Mask))
+  (pad 2 thru_hole oval (at 2.54 -5.5) (size 2.5 2.5) (drill 1.7) (layers *.Cu *.Mask))
   (model ${KISYS3DMOD}/TO_SOT_Packages_THT.3dshapes/TO-220-3_Vertical.wrl
     (at (xyz 0.1 0 0))
     (scale (xyz 0.393701 0.393701 0.393701))
