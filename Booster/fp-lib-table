@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Trainiot)(type KiCad)(uri "D:\\trainiot\\github\\Hardware\\KiCad Libraries\\Trainiot.pretty")(options "")(descr ""))
+)
