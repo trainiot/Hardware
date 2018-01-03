@@ -61,4 +61,4 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-LibName33=D:/trainiot/github/Hardware/KiCad Libraries/Trainiot
+LibName33=../KiCad Libraries/Trainiot
