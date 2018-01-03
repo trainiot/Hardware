@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title ""
 Date ""
 Rev ""
@@ -105,4 +105,10 @@ Wire Wire Line
 Wire Wire Line
 	2000 3300 6750 3300
 Connection ~ 2000 3700
+$Sheet
+S 7150 3150 1300 1050
+U 5A50AD3A
+F0 "DataCapture" 60
+F1 "DataCapture.sch" 60
+$EndSheet
 $EndSCHEMATC
