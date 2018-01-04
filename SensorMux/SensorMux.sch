@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Trainiot
 LIBS:SensorMux-cache
 EELAYER 25 0
 EELAYER END
@@ -84,6 +85,12 @@ F2 "ROW_VEE_BUS" O R 3350 4700 60
 F3 "ROW_ANALOG_BUS" O R 3350 4900 60 
 F4 "COLUMN_VCC_BUS" O R 3350 5100 60 
 $EndSheet
+$Sheet
+S 7150 3150 1300 1050
+U 5A50AD3A
+F0 "DataCapture" 60
+F1 "DataCapture.sch" 60
+$EndSheet
 Wire Wire Line
 	1800 3700 2300 3700
 Wire Wire Line
@@ -105,10 +112,4 @@ Wire Wire Line
 Wire Wire Line
 	2000 3300 6750 3300
 Connection ~ 2000 3700
-$Sheet
-S 7150 3150 1300 1050
-U 5A50AD3A
-F0 "DataCapture" 60
-F1 "DataCapture.sch" 60
-$EndSheet
 $EndSCHEMATC
