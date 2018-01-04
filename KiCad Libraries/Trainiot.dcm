@@ -136,4 +136,9 @@ D Tripple Single Pole Single Throw (SPST) switch
 K switch lever
 $ENDCMP
 #
+$CMP TLC5510
+D 20Msps 8 bit parallel ADC
+K ADC 20Mbsp 8bit
+$ENDCMP
+#
 #End Doc Library
