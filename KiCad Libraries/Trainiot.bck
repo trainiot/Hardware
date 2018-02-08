@@ -120,11 +120,20 @@ $CMP 74LS596
 D 8 bits serial in // out Shift Register Open Collect.
 K HCMOS SR OpenCol
 $ENDCMP
+#
 $CMP SN754410
 D Quadruple Half-H Driver, 1A per Driver.
 K TTL HALF-H
 $ENDCMP
-
-
+#
+$CMP SW_SPST_x02
+D Dual Single Pole Single Throw (SPST) switch
+K switch lever
+$ENDCMP
+#
+$CMP SW_SPST_x03
+D Tripple Single Pole Single Throw (SPST) switch
+K switch lever
+$ENDCMP
 #
 #End Doc Library
