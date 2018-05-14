@@ -121,6 +121,11 @@ D 8 bits serial in // out Shift Register Open Collect.
 K HCMOS SR OpenCol
 $ENDCMP
 #
+$CMP MT3608
+D Step up boost converter
+F https://www.olimex.com/Products/Breadboarding/BB-PWR-3608/resources/MT3608.pdf
+$ENDCMP
+#
 $CMP SN754410
 D Quadruple Half-H Driver, 1A per Driver.
 K TTL HALF-H
