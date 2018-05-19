@@ -5302,7 +5302,7 @@ Text GLabel 16200 2550 2    50   Output ~ 0
 ~RTS
 Wire Wire Line
 	15850 2350 16450 2350
-Text GLabel 16650 2350 2    50   Output ~ 0
+Text GLabel 16650 2250 2    50   Output ~ 0
 USB_RXD
 $Comp
 L Device:R R?
@@ -5319,7 +5319,7 @@ Wire Wire Line
 	15950 2250 15850 2250
 Wire Wire Line
 	16250 2250 16550 2250
-Text GLabel 16650 2250 2    50   Output ~ 0
+Text GLabel 16650 2350 2    50   Input ~ 0
 USB_TXD
 NoConn ~ 15850 2450
 NoConn ~ 15850 2650
@@ -5515,47 +5515,68 @@ Wire Wire Line
 	2650 1400 2850 1400
 Text Notes 2950 1400 0    50   ~ 0
 Too big voltage drop for 3.3V regulator?\nWant to favor external 5V over USB 5V - maybe with a mosfet closed when external power is available.
-$Comp
-L Connector:Conn_01x05_Male J?
-U 1 1 5D730C02
-P 16950 3300
-F 0 "J?" H 17150 3650 50  0000 R CNN
-F 1 "UART_PRG" H 17250 3050 50  0000 R CNN
-F 2 "" H 16950 3300 50  0001 C CNN
-F 3 "~" H 16950 3300 50  0001 C CNN
-	1    16950 3300
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	16750 3100 16550 3100
+	16750 2950 16550 2950
 Wire Wire Line
-	16550 3100 16550 2250
+	16550 2950 16550 2250
 Connection ~ 16550 2250
 Wire Wire Line
 	16550 2250 16650 2250
 Wire Wire Line
-	16450 2350 16450 3200
+	16450 2350 16450 3050
 Wire Wire Line
-	16450 3200 16750 3200
+	16450 3050 16750 3050
 Connection ~ 16450 2350
 Wire Wire Line
 	16450 2350 16650 2350
 Wire Wire Line
-	16100 2750 16100 3300
+	16100 2750 16100 3150
 Wire Wire Line
-	16100 3300 16750 3300
+	16100 3150 16750 3150
 Connection ~ 16100 2750
 Wire Wire Line
 	16100 2750 16200 2750
 Wire Wire Line
-	16000 2550 16000 3400
+	16000 2550 16000 3250
 Wire Wire Line
-	16000 3400 16750 3400
+	16000 3250 16750 3250
 Connection ~ 16000 2550
 Wire Wire Line
 	16000 2550 16200 2550
 Wire Wire Line
-	16750 3500 16500 3500
+	16750 3350 16500 3350
+$Comp
+L power:GND #PWR?
+U 1 1 5E1D0744
+P 16500 3450
+F 0 "#PWR?" H 16500 3200 50  0001 C CNN
+F 1 "GND" H 16650 3400 50  0001 C TNN
+F 2 "" H 16500 3450 50  0001 C CNN
+F 3 "" H 16500 3450 50  0001 C CNN
+	1    16500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16500 3450 16500 3350
+$Comp
+L Connector:Conn_01x06_Male J?
+U 1 1 5B0BC9AF
+P 16950 3150
+F 0 "J?" H 17000 2750 50  0000 R CNN
+F 1 "Program" H 17200 3400 50  0000 R CNN
+F 2 "" H 16950 3150 50  0001 C CNN
+F 3 "~" H 16950 3150 50  0001 C CNN
+	1    16950 3150
+	-1   0    0    1   
+$EndComp
+Text GLabel 16750 2600 2    50   Output ~ 0
+USB5V
+Wire Wire Line
+	16750 2850 16650 2850
+Wire Wire Line
+	16650 2850 16650 2600
+Wire Wire Line
+	16650 2600 16750 2600
 Wire Bus Line
 	3350 14400 4950 14400
 Wire Bus Line
@@ -5564,15 +5585,4 @@ Wire Bus Line
 	2700 5150 2700 14400
 Wire Bus Line
 	4950 5150 4950 14400
-$Comp
-L power:GND #PWR?
-U 1 1 5E1D0744
-P 16500 3500
-F 0 "#PWR?" H 16500 3250 50  0001 C CNN
-F 1 "GND" H 16650 3450 50  0001 C TNN
-F 2 "" H 16500 3500 50  0001 C CNN
-F 3 "" H 16500 3500 50  0001 C CNN
-	1    16500 3500
-	0    1    1    0   
-$EndComp
 $EndSCHEMATC
