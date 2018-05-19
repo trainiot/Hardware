@@ -121,6 +121,12 @@ D 8 bits serial in // out Shift Register Open Collect.
 K HCMOS SR OpenCol
 $ENDCMP
 #
+$CMP CP2102
+D Single-Chip USB-to-UART Bridge
+K USB UART
+F https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf
+$ENDCMP
+#
 $CMP MT3608
 D Step up boost converter
 F https://www.olimex.com/Products/Breadboarding/BB-PWR-3608/resources/MT3608.pdf
