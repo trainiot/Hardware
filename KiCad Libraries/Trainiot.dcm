@@ -127,6 +127,12 @@ K USB UART
 F https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf
 $ENDCMP
 #
+$CMP JYSP75S4
+D Crystal Oscillator
+K Crystal Oscillator
+F http://www.1688eric.com/upload/pdf/SPXO%207050-min(1).pdf
+$ENDCMP
+#
 $CMP MT3608
 D Step up boost converter
 F https://www.olimex.com/Products/Breadboarding/BB-PWR-3608/resources/MT3608.pdf
