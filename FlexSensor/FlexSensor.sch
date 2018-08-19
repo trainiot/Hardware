@@ -1645,76 +1645,12 @@ Wire Notes Line
 	1350 4400 1350 17050
 Text Notes 1450 4750 0    200  ~ 40
 Demultiplexer
-Text GLabel 11350 21000 0    50   Input ~ 0
+Text GLabel 11700 21500 0    50   Input ~ 0
 ANALOG
-$Comp
-L Device:R R?
-U 1 1 5D06ABBF
-P 11650 21250
-F 0 "R?" H 11720 21296 50  0000 L CNN
-F 1 "820K" V 11650 21250 50  0000 C CNN
-F 2 "" V 11580 21250 50  0001 C CNN
-F 3 "~" H 11650 21250 50  0001 C CNN
-	1    11650 21250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5D06ACF4
-P 11650 21750
-F 0 "R?" H 11720 21796 50  0000 L CNN
-F 1 "68K" V 11650 21750 50  0000 C CNN
-F 2 "" V 11580 21750 50  0001 C CNN
-F 3 "~" H 11650 21750 50  0001 C CNN
-	1    11650 21750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11650 21900 11650 22000
-$Comp
-L power:GND #PWR?
-U 1 1 5D14CB08
-P 11650 22000
-F 0 "#PWR?" H 11650 21750 50  0001 C CNN
-F 1 "GND" H 11800 21950 50  0001 C TNN
-F 2 "" H 11650 22000 50  0001 C CNN
-F 3 "" H 11650 22000 50  0001 C CNN
-	1    11650 22000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U?
-U 1 1 5D14CF1A
-P 14550 21700
-F 0 "U?" H 14550 21850 50  0000 L CNN
-F 1 "LM6132" H 14500 21500 50  0000 L CNN
-F 2 "" H 14550 21700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 14550 21700 50  0001 C CNN
-	1    14550 21700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	14850 21700 14950 21700
-$Comp
-L Amplifier_Operational:LM358 U?
-U 1 1 5D40BB93
-P 12950 21600
-F 0 "U?" H 12950 21750 50  0000 L CNN
-F 1 "LM6132" H 12900 21400 50  0000 L CNN
-F 2 "" H 12950 21600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 12950 21600 50  0001 C CNN
-	1    12950 21600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11650 21400 11650 21500
-Wire Wire Line
-	11650 21000 11650 21100
 Wire Wire Line
 	12650 21500 12150 21500
-Connection ~ 11650 21500
-Wire Wire Line
-	11650 21500 11650 21600
 $Comp
 L Regulator_SwitchedCapacitor:ICL7660 U?
 U 1 1 5AFD1712
@@ -1889,20 +1825,7 @@ Wire Wire Line
 	12450 21000 12850 21000
 Wire Wire Line
 	12850 21000 12850 21300
-Wire Wire Line
-	12450 21000 12450 20900
 Connection ~ 12450 21000
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5C40C0B1
-P 12450 20900
-F 0 "#PWR?" H 12450 20750 50  0001 C CNN
-F 1 "+3V3" H 12465 21073 50  0000 C CNN
-F 2 "" H 12450 20900 50  0001 C CNN
-F 3 "" H 12450 20900 50  0001 C CNN
-	1    12450 20900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	13250 21600 13400 21600
 Wire Wire Line
@@ -1911,8 +1834,6 @@ Wire Wire Line
 	12550 22500 12550 21700
 Wire Wire Line
 	12550 21700 12650 21700
-Wire Wire Line
-	11350 21000 11650 21000
 $Comp
 L Device:C_Small C?
 U 1 1 5C4A573C
@@ -1927,8 +1848,6 @@ $EndComp
 Wire Wire Line
 	12150 21650 12150 21500
 Connection ~ 12150 21500
-Wire Wire Line
-	12150 21500 11650 21500
 Wire Wire Line
 	12150 21850 12150 22000
 $Comp
@@ -2079,18 +1998,6 @@ F 3 "~" H 12350 21500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Test_Point TP?
-U 1 1 5CC9E626
-P 11650 21000
-F 0 "TP?" H 11600 21200 50  0000 L CNN
-F 1 "Test_Point" H 11708 21029 50  0001 L CNN
-F 2 "" H 11850 21000 50  0001 C CNN
-F 3 "~" H 11850 21000 50  0001 C CNN
-	1    11650 21000
-	1    0    0    -1  
-$EndComp
-Connection ~ 11650 21000
-$Comp
 L Device:R R?
 U 1 1 5CD91927
 P 13850 21400
@@ -2161,22 +2068,7 @@ $EndComp
 Text Notes 14150 21250 0    50   ~ 0
 +0.2V
 Wire Wire Line
-	13600 21400 13600 21050
-Wire Wire Line
 	13600 21400 13700 21400
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5D24A1FC
-P 13600 21050
-F 0 "#PWR?" H 13600 20900 50  0001 C CNN
-F 1 "+3V3" H 13615 21223 50  0000 C CNN
-F 2 "" H 13600 21050 50  0001 C CNN
-F 3 "" H 13600 21050 50  0001 C CNN
-	1    13600 21050
-	1    0    0    -1  
-$EndComp
-Text Notes 11800 21050 0    50   ~ 0
-0-1.6V
 $Comp
 L Device:R R?
 U 1 1 5D24B321
@@ -7047,6 +6939,50 @@ Wire Wire Line
 	8750 1900 8750 2400
 Wire Wire Line
 	8150 1900 8150 2000
+$Comp
+L Amplifier_Operational:LM358 U?
+U 1 1 5B3667E6
+P 12950 21600
+F 0 "U?" H 13291 21646 50  0000 L CNN
+F 1 "LM358" H 13291 21555 50  0000 L CNN
+F 2 "" H 12950 21600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 12950 21600 50  0001 C CNN
+	1    12950 21600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 20750 12450 21000
+Text GLabel 12400 20750 0    50   Input ~ 0
+24V
+Wire Wire Line
+	12400 20750 12450 20750
+Wire Wire Line
+	12850 21000 13600 21000
+Wire Wire Line
+	13600 21000 13600 21400
+Connection ~ 12850 21000
+$Comp
+L Amplifier_Operational:LM358 U?
+U 1 1 5B6CE2B3
+P 14550 21700
+F 0 "U?" H 14891 21746 50  0000 L CNN
+F 1 "LM358" H 14891 21655 50  0000 L CNN
+F 2 "" H 14550 21700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm358.pdf" H 14550 21700 50  0001 C CNN
+	1    14550 21700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11700 21500 12150 21500
+Text GLabel 10800 1700 2    50   Output ~ 0
+24V
+Wire Wire Line
+	10550 1950 10550 1700
+Wire Wire Line
+	10550 1700 10800 1700
+Connection ~ 10550 1950
+Wire Wire Line
+	5050 3300 5050 3400
 Wire Bus Line
 	3350 14400 4950 14400
 Wire Bus Line
@@ -7055,4 +6991,15 @@ Wire Bus Line
 	2700 5150 2700 14400
 Wire Bus Line
 	4950 5150 4950 14400
+$Comp
+L power:GND #PWR?
+U 1 1 5B9EBAD0
+P 5050 3400
+F 0 "#PWR?" H 5050 3150 50  0001 C CNN
+F 1 "GND" H 5200 3350 50  0001 C TNN
+F 2 "" H 5050 3400 50  0001 C CNN
+F 3 "" H 5050 3400 50  0001 C CNN
+	1    5050 3400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
